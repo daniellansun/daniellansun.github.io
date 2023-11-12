@@ -189,34 +189,6 @@
   </url>
   
   <url>
-    <loc>https://blog.sunlan.me/tags/Closure/</loc>
-    <lastmod>2023-11-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Lambda/</loc>
-    <lastmod>2023-11-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Method-Reference/</loc>
-    <lastmod>2023-11-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Constructor-Reference/</loc>
-    <lastmod>2023-11-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.sunlan.me/tags/Parrot-Parser/</loc>
     <lastmod>2023-11-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -232,13 +204,6 @@
   
   <url>
     <loc>https://blog.sunlan.me/tags/GINQ/</loc>
-    <lastmod>2023-11-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Groovy-History/</loc>
     <lastmod>2023-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -295,6 +260,13 @@
   
   <url>
     <loc>https://blog.sunlan.me/tags/Groovydoc/</loc>
+    <lastmod>2023-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Groovy-History/</loc>
     <lastmod>2023-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -503,6 +475,34 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://blog.sunlan.me/tags/Closure/</loc>
+    <lastmod>2023-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Lambda/</loc>
+    <lastmod>2023-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Method-Reference/</loc>
+    <lastmod>2023-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Constructor-Reference/</loc>
+    <lastmod>2023-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -520,14 +520,14 @@
   </url>
   
   <url>
-    <loc>https://blog.sunlan.me/categories/Java/</loc>
+    <loc>https://blog.sunlan.me/categories/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2023-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.sunlan.me/categories/%E5%85%B6%E4%BB%96/</loc>
+    <loc>https://blog.sunlan.me/categories/Java/</loc>
     <lastmod>2023-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
