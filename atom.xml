@@ -6,7 +6,7 @@
   <link href="https://blog.sunlan.me/atom.xml" rel="self"/>
   
   <link href="https://blog.sunlan.me/"/>
-  <updated>2023-11-13T17:04:13.987Z</updated>
+  <updated>2023-11-13T17:08:09.131Z</updated>
   <id>https://blog.sunlan.me/</id>
   
   <author>
@@ -21,10 +21,19 @@
     <link href="https://blog.sunlan.me/2023/11/14/%E6%B5%85%E8%B0%88Java%E5%AD%97%E8%8A%82%E7%A0%81/"/>
     <id>https://blog.sunlan.me/2023/11/14/%E6%B5%85%E8%B0%88Java%E5%AD%97%E8%8A%82%E7%A0%81/</id>
     <published>2023-11-13T16:08:36.000Z</published>
-    <updated>2023-11-13T17:04:13.987Z</updated>
+    <updated>2023-11-13T17:08:09.131Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;Java 字节码（bytecode）是Java虚拟机(JVM)的中间表示形式，它是Java编译过程中的核心，使Java能够实现“一次编写，到处运行”的理念。</summary>
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;Java 字节码（bytecode）是Java虚拟机(JVM)的中间表示形式，它是Java编译过程中的核心，使Java能够实现“一次编写，到处运行”的理念。&lt;/p&gt;
+&lt;h2 id=&quot;字节码指令主要类别及作用&quot;&gt;&lt;a href=&quot;#字节码指令主要类别及作用&quot; class=&quot;headerlink&quot; title=&quot;字节码指令主要类别及作用&quot;&gt;&lt;/a&gt;字节码指令主要类别及作用&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;加载和存储指令: 处理数据的加载和存储操作（例如：&lt;code&gt;aload_0&lt;/code&gt;, &lt;code&gt;istore&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;算术和逻辑指令: 执行基本的算术和逻辑运算（例如: &lt;code&gt;ladd&lt;/code&gt;, &lt;code&gt;fcmpl&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;类型转换指令: 在不同类型之间转换数据（例如：&lt;code&gt;i2b&lt;/code&gt;, &lt;code&gt;d2i&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;对象创建和操作指令: 创建和操作对象和数组（例如：&lt;code&gt;new&lt;/code&gt;, &lt;code&gt;putfield&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;操作数栈管理指令: 直接操作操作数栈的指令（例如：&lt;code&gt;swap&lt;/code&gt;, &lt;code&gt;dup&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;控制转移指令: 改变程序的控制流（例如：&lt;code&gt;ifeq&lt;/code&gt;, &lt;code&gt;goto&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;方法调用和返回指令: 用于方法调用和返回（例如：&lt;code&gt;invokevirtual&lt;/code&gt;, &lt;code&gt;areturn&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;同步指令: 支持多线程同步（例如：&lt;code&gt;monitorenter&lt;/code&gt;, &lt;code&gt;monitorexit&lt;/code&gt;）</summary>
     
     
     
