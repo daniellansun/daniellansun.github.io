@@ -198,13 +198,6 @@
   </url>
   
   <url>
-    <loc>https://blog.sunlan.me/tags/Parrot-Parser/</loc>
-    <lastmod>2023-11-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.sunlan.me/tags/Closure/</loc>
     <lastmod>2023-11-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -227,6 +220,13 @@
   
   <url>
     <loc>https://blog.sunlan.me/tags/Constructor-Reference/</loc>
+    <lastmod>2023-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Parrot-Parser/</loc>
     <lastmod>2023-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -543,13 +543,6 @@
   </url>
   
   <url>
-    <loc>https://blog.sunlan.me/categories/%E5%85%B6%E4%BB%96/</loc>
-    <lastmod>2023-11-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.sunlan.me/categories/MyBatis/</loc>
     <lastmod>2023-11-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -557,7 +550,7 @@
   </url>
   
   <url>
-    <loc>https://blog.sunlan.me/categories/Design-Pattern/</loc>
+    <loc>https://blog.sunlan.me/categories/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2023-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -565,6 +558,13 @@
   
   <url>
     <loc>https://blog.sunlan.me/categories/Java/JVM/</loc>
+    <lastmod>2023-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/categories/Design-Pattern/</loc>
     <lastmod>2023-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
