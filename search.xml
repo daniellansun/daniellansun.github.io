@@ -341,6 +341,15 @@
       </tags>
   </entry>
   <entry>
+    <title>My first blog</title>
+    <url>/2017/03/19/My-first-blog/</url>
+    <content><![CDATA[<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">println <span class="string">&quot;Hello, world!&quot;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+  </entry>
+  <entry>
     <title>MyBatis之查询返回记录字段不全问题的解决方法</title>
     <url>/2017/04/28/MyBatis%E4%B9%8B%E6%9F%A5%E8%AF%A2%E8%BF%94%E5%9B%9E%E8%AE%B0%E5%BD%95%E5%AD%97%E6%AE%B5%E4%B8%8D%E5%85%A8%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h2 id="问题现象"><a href="#问题现象" class="headerlink" title="问题现象"></a>问题现象</h2><p>当select的返回记录类型设置为map(或者其他Map类型，比如java.util.HashMap等)时，返回的map对象可能并未包含所有字段，即只出现有值的字段，而这恰恰是MyBatis的默认处理方式。</p>
@@ -356,15 +365,6 @@
       <tags>
         <tag>MyBatis</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>My first blog</title>
-    <url>/2017/03/19/My-first-blog/</url>
-    <content><![CDATA[<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">println <span class="string">&quot;Hello, world!&quot;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
   </entry>
   <entry>
     <title>探究Java Virtual Thread</title>
@@ -619,6 +619,42 @@
         <tag>Builder Pattern</tag>
         <tag>Prototype Pattern</tag>
         <tag>Singleton Pattern</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浅谈设计模式·驾驭变化之道（概览篇）</title>
+    <url>/2023/02/12/%E6%B5%85%E8%B0%88%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%C2%B7%E9%A9%BE%E9%A9%AD%E5%8F%98%E5%8C%96%E4%B9%8B%E9%81%93%EF%BC%88%E6%A6%82%E8%A7%88%E7%AF%87%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="设计模式概述"><a href="#设计模式概述" class="headerlink" title="设计模式概述"></a>设计模式概述</h2><ul>
+<li>设计模式（Design Pattern）是针对软件设计中普遍存在（反复出现）的各种问题所提出的解决方案；</li>
+<li>该术语由Erich Gamma、Richard Helm、Ralph Johnson和John Vlissides等人在1990年代从建筑设计领域引入到计算机科学，而该4人被称为Gang of Four（简称GoF）。<span id="more"></span></li>
+</ul>
+<p><img data-src="GoF.png" alt="Gang of Four"></p>
+<h2 id="设计模式分类"><a href="#设计模式分类" class="headerlink" title="设计模式分类"></a>设计模式分类</h2><p>GoF提出的经典设计模式共有23种，这些设计模式可归类为：① 创建型模式；② 结构型模式；③ 行为型模式。具体如下图所示：</p>
+<p><img data-src="design.patterns.svg" alt="23种经典设计模式及归类"></p>
+<h2 id="设计模式作用"><a href="#设计模式作用" class="headerlink" title="设计模式作用"></a>设计模式作用</h2><ul>
+<li>提高代码复用性</li>
+<li>改善代码可维护性</li>
+<li>提升代码可读性</li>
+<li>保证代码可靠性</li>
+<li>促进代码编写工程化</li>
+</ul>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>在软件设计时，不论是宏观的架构设计，还是微观的代码设计，都围绕一个普遍的问题，即“分”与“合”、“动”与“静”的权衡。而23种经典设计模式也在不遗余力地处理该问题，并提供相应的设计指南。后续将连载以下3篇：</p>
+<ul>
+<li>《<a href="/2023/02/18/%E6%B5%85%E8%B0%88%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%C2%B7%E9%A9%BE%E9%A9%AD%E5%8F%98%E5%8C%96%E4%B9%8B%E9%81%93%EF%BC%88%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F%E7%AF%87%EF%BC%89/" title="浅谈设计模式·驾驭变化之道（创建型模式篇）">浅谈设计模式·驾驭变化之道（创建型模式篇）</a>》</li>
+<li>《浅谈设计模式·驾驭变化之道（结构型模式篇）》</li>
+<li>《浅谈设计模式·驾驭变化之道（行为型模式篇）》</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU29mdHdhcmVfZGVzaWduX3BhdHRlcm4=">Software Design Pattern from Wikipedia<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <categories>
+        <category>Design Pattern</category>
+      </categories>
+      <tags>
+        <tag>Design Pattern</tag>
+        <tag>Creational Pattern</tag>
+        <tag>Structural Pattern</tag>
+        <tag>Behavioral Pattern</tag>
+        <tag>GoF</tag>
       </tags>
   </entry>
   <entry>
@@ -2361,42 +2397,6 @@
       <tags>
         <tag>Java</tag>
         <tag>bytecode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>浅谈设计模式·驾驭变化之道（概览篇）</title>
-    <url>/2023/02/12/%E6%B5%85%E8%B0%88%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%C2%B7%E9%A9%BE%E9%A9%AD%E5%8F%98%E5%8C%96%E4%B9%8B%E9%81%93%EF%BC%88%E6%A6%82%E8%A7%88%E7%AF%87%EF%BC%89/</url>
-    <content><![CDATA[<h2 id="设计模式概述"><a href="#设计模式概述" class="headerlink" title="设计模式概述"></a>设计模式概述</h2><ul>
-<li>设计模式（Design Pattern）是针对软件设计中普遍存在（反复出现）的各种问题所提出的解决方案；</li>
-<li>该术语由Erich Gamma、Richard Helm、Ralph Johnson和John Vlissides等人在1990年代从建筑设计领域引入到计算机科学，而该4人被称为Gang of Four（简称GoF）。<span id="more"></span></li>
-</ul>
-<p><img data-src="GoF.png" alt="Gang of Four"></p>
-<h2 id="设计模式分类"><a href="#设计模式分类" class="headerlink" title="设计模式分类"></a>设计模式分类</h2><p>GoF提出的经典设计模式共有23种，这些设计模式可归类为：① 创建型模式；② 结构型模式；③ 行为型模式。具体如下图所示：</p>
-<p><img data-src="design.patterns.svg" alt="23种经典设计模式及归类"></p>
-<h2 id="设计模式作用"><a href="#设计模式作用" class="headerlink" title="设计模式作用"></a>设计模式作用</h2><ul>
-<li>提高代码复用性</li>
-<li>改善代码可维护性</li>
-<li>提升代码可读性</li>
-<li>保证代码可靠性</li>
-<li>促进代码编写工程化</li>
-</ul>
-<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>在软件设计时，不论是宏观的架构设计，还是微观的代码设计，都围绕一个普遍的问题，即“分”与“合”、“动”与“静”的权衡。而23种经典设计模式也在不遗余力地处理该问题，并提供相应的设计指南。后续将连载以下3篇：</p>
-<ul>
-<li>《<a href="/2023/02/18/%E6%B5%85%E8%B0%88%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%C2%B7%E9%A9%BE%E9%A9%AD%E5%8F%98%E5%8C%96%E4%B9%8B%E9%81%93%EF%BC%88%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F%E7%AF%87%EF%BC%89/" title="浅谈设计模式·驾驭变化之道（创建型模式篇）">浅谈设计模式·驾驭变化之道（创建型模式篇）</a>》</li>
-<li>《浅谈设计模式·驾驭变化之道（结构型模式篇）》</li>
-<li>《浅谈设计模式·驾驭变化之道（行为型模式篇）》</li>
-</ul>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU29mdHdhcmVfZGVzaWduX3BhdHRlcm4=">Software Design Pattern from Wikipedia<i class="fa fa-external-link-alt"></i></span></p>
-]]></content>
-      <categories>
-        <category>Design Pattern</category>
-      </categories>
-      <tags>
-        <tag>Design Pattern</tag>
-        <tag>Creational Pattern</tag>
-        <tag>Structural Pattern</tag>
-        <tag>Behavioral Pattern</tag>
-        <tag>GoF</tag>
       </tags>
   </entry>
   <entry>
