@@ -543,14 +543,14 @@
   </url>
   
   <url>
-    <loc>https://blog.sunlan.me/categories/MyBatis/</loc>
+    <loc>https://blog.sunlan.me/categories/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2023-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.sunlan.me/categories/%E5%85%B6%E4%BB%96/</loc>
+    <loc>https://blog.sunlan.me/categories/MyBatis/</loc>
     <lastmod>2023-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
