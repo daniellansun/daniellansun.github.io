@@ -6,7 +6,7 @@
   <link href="https://blog.sunlan.me/atom.xml" rel="self"/>
   
   <link href="https://blog.sunlan.me/"/>
-  <updated>2023-11-19T18:47:05.538Z</updated>
+  <updated>2023-11-19T18:49:43.609Z</updated>
   <id>https://blog.sunlan.me/</id>
   
   <author>
@@ -21,16 +21,10 @@
     <link href="https://blog.sunlan.me/2023/11/20/%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E5%88%86%E5%B1%82%E8%AE%BE%E8%AE%A1/"/>
     <id>https://blog.sunlan.me/2023/11/20/%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E5%88%86%E5%B1%82%E8%AE%BE%E8%AE%A1/</id>
     <published>2023-11-19T17:48:17.000Z</published>
-    <updated>2023-11-19T18:47:05.538Z</updated>
+    <updated>2023-11-19T18:49:43.609Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;在构建现代数据仓库(Data</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;在构建现代数据仓库(Data Warehouse)时，分层设计方法不仅提高了数据处理的效率和质量，还增加了系统的灵活性和可扩展性，对于各种类型的业务环境都至关重要。</summary>
     
     
     
