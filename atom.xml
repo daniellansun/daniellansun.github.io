@@ -6,7 +6,7 @@
   <link href="https://blog.sunlan.me/atom.xml" rel="self"/>
   
   <link href="https://blog.sunlan.me/"/>
-  <updated>2023-11-15T17:42:40.964Z</updated>
+  <updated>2023-11-19T18:47:05.538Z</updated>
   <id>https://blog.sunlan.me/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浅谈数据仓库的分层设计</title>
+    <link href="https://blog.sunlan.me/2023/11/20/%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E5%88%86%E5%B1%82%E8%AE%BE%E8%AE%A1/"/>
+    <id>https://blog.sunlan.me/2023/11/20/%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E5%88%86%E5%B1%82%E8%AE%BE%E8%AE%A1/</id>
+    <published>2023-11-19T17:48:17.000Z</published>
+    <updated>2023-11-19T18:47:05.538Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;在构建现代数据仓库(Data</summary>
+        
+      
+    
+    
+    
+    <category term="Data Warehouse" scheme="https://blog.sunlan.me/categories/Data-Warehouse/"/>
+    
+    
+    <category term="Data Warehouse" scheme="https://blog.sunlan.me/tags/Data-Warehouse/"/>
+    
+    <category term="ODS" scheme="https://blog.sunlan.me/tags/ODS/"/>
+    
+    <category term="DWD" scheme="https://blog.sunlan.me/tags/DWD/"/>
+    
+    <category term="DWM" scheme="https://blog.sunlan.me/tags/DWM/"/>
+    
+    <category term="DWB" scheme="https://blog.sunlan.me/tags/DWB/"/>
+    
+    <category term="DWS" scheme="https://blog.sunlan.me/tags/DWS/"/>
+    
+    <category term="ADS" scheme="https://blog.sunlan.me/tags/ADS/"/>
+    
+  </entry>
   
   <entry>
     <title>浅谈Java字节码</title>
