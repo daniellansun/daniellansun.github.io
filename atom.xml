@@ -6,7 +6,7 @@
   <link href="https://blog.sunlan.me/atom.xml" rel="self"/>
   
   <link href="https://blog.sunlan.me/"/>
-  <updated>2023-11-19T18:49:43.609Z</updated>
+  <updated>2023-12-03T15:21:11.528Z</updated>
   <id>https://blog.sunlan.me/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浅谈数据架构及实践</title>
+    <link href="https://blog.sunlan.me/2023/12/03/%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E6%9E%B6%E6%9E%84%E5%8F%8A%E5%AE%9E%E8%B7%B5/"/>
+    <id>https://blog.sunlan.me/2023/12/03/%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E6%9E%B6%E6%9E%84%E5%8F%8A%E5%AE%9E%E8%B7%B5/</id>
+    <published>2023-12-03T14:57:27.000Z</published>
+    <updated>2023-12-03T15:21:11.528Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;在当今的数字化时代，企业级数据架构对于各行各业来说都是至关重要的。它不仅涉及数据的有效管理和利用，还直接影响到业务决策、操作效率和合规性。本文旨在探讨数据标准化、数据分布、数据生命周期管理、数据模型构建、数据安全和数据治理等关键方面，强调它们对于实现数据资产最大化的重要性，并提供具体的应用示例。</summary>
+    
+    
+    
+    <category term="Data Architecture" scheme="https://blog.sunlan.me/categories/Data-Architecture/"/>
+    
+    
+    <category term="Data Architecture" scheme="https://blog.sunlan.me/tags/Data-Architecture/"/>
+    
+  </entry>
   
   <entry>
     <title>浅谈数据仓库的分层设计</title>
