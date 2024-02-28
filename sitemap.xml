@@ -283,27 +283,6 @@
   </url>
   
   <url>
-    <loc>https://blog.sunlan.me/tags/GroovyHelp/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Javadoc/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Groovydoc/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.sunlan.me/tags/Switch-Expression/</loc>
     <lastmod>2024-02-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -333,6 +312,27 @@
   
   <url>
     <loc>https://blog.sunlan.me/tags/TOML/</loc>
+    <lastmod>2024-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/GroovyHelp/</loc>
+    <lastmod>2024-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Javadoc/</loc>
+    <lastmod>2024-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Groovydoc/</loc>
     <lastmod>2024-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -677,13 +677,6 @@
   </url>
   
   <url>
-    <loc>https://blog.sunlan.me/categories/%E5%85%B6%E4%BB%96/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.sunlan.me/categories/Java/</loc>
     <lastmod>2024-02-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -691,7 +684,21 @@
   </url>
   
   <url>
+    <loc>https://blog.sunlan.me/categories/%E5%85%B6%E4%BB%96/</loc>
+    <lastmod>2024-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.sunlan.me/categories/MyBatis/</loc>
+    <lastmod>2024-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/categories/Java/JVM/</loc>
     <lastmod>2024-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -713,13 +720,6 @@
   
   <url>
     <loc>https://blog.sunlan.me/categories/Data-Architecture/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/categories/Java/JVM/</loc>
     <lastmod>2024-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
