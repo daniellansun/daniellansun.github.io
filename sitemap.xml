@@ -2,9 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.sunlan.me/2024/03/16/%E4%BC%81%E4%B8%9A%E6%80%BB%E4%BD%93%E6%9E%B6%E6%9E%84%E7%AE%A1%E6%8E%A7%E5%8E%9F%E5%88%99/</loc>
+    
+    <lastmod>2024-03-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.sunlan.me/2023/12/18/%E6%B5%85%E8%B0%88%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84%E5%88%86%E5%B1%82%E8%AE%BE%E8%AE%A1/</loc>
     
-    <lastmod>2023-12-17</lastmod>
+    <lastmod>2024-03-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/2023/12/03/%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E6%9E%B6%E6%9E%84%E5%8F%8A%E5%AE%9E%E8%B7%B5/</loc>
+    
+    <lastmod>2024-03-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -23,15 +41,6 @@
     <loc>https://blog.sunlan.me/2022/12/27/%E6%BC%AB%E8%B0%88%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/</loc>
     
     <lastmod>2023-12-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/2023/12/03/%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E6%9E%B6%E6%9E%84%E5%8F%8A%E5%AE%9E%E8%B7%B5/</loc>
-    
-    <lastmod>2023-12-03</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -220,7 +229,7 @@
 
   <url>
     <loc>https://blog.sunlan.me/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -228,434 +237,441 @@
   
   <url>
     <loc>https://blog.sunlan.me/tags/Groovy-3/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Closure/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Lambda/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Method-Reference/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Constructor-Reference/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Parrot-Parser/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Groovy-4/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/GINQ/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Switch-Expression/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Record-Class/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Sealed-Class/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Range/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/TOML/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/GroovyHelp/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Javadoc/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Groovydoc/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Groovy-History/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/JVM/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Bytecode/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/invokedynamic/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Reflection/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/MyBatis/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Virtual-Thread/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Platform-Thread/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Native-Thread/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Concurrent-Programming/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Coroutine/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Loom/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Java/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/bytecode/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/synchronized/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Lock/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Consensus/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Raft/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Data-Warehouse/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/ODS/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/DWD/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/DWM/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/DWB/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/DWS/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/ADS/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Network/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Architecture/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.sunlan.me/tags/Access-Layer/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <loc>https://blog.sunlan.me/tags/Governance/</loc>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.sunlan.me/tags/Distribution-Layer/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <loc>https://blog.sunlan.me/tags/Virtual-Thread/</loc>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.sunlan.me/tags/Core-Layer/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <loc>https://blog.sunlan.me/tags/Platform-Thread/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Native-Thread/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Concurrent-Programming/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Coroutine/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Loom/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Java/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/bytecode/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/synchronized/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Lock/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Consensus/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Raft/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Data-Warehouse/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/ODS/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/DWD/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/DWM/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/DWB/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/DWS/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/ADS/</loc>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Data-Architecture/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Network/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Access-Layer/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Distribution-Layer/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Core-Layer/</loc>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Design-Pattern/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Creational-Pattern/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Factory-Method-Pattern/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Abstract-Factory-Pattern/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Builder-Pattern/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Prototype-Pattern/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Singleton-Pattern/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Structural-Pattern/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Behavioral-Pattern/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/GoF/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Distributed-Transaction/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/2PC/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/3PC/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/TCC/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/tags/Saga/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -664,77 +680,84 @@
   
   <url>
     <loc>https://blog.sunlan.me/categories/Groovy/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/categories/Tool/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/categories/Java/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/categories/%E5%85%B6%E4%BB%96/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/categories/MyBatis/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/categories/Architecture/</loc>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/categories/Java/JVM/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/categories/Distributed-System/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/categories/Data-Warehouse/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/categories/Network/</loc>
-    <lastmod>2024-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/categories/Data-Architecture/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.sunlan.me/categories/Design-Pattern/</loc>
-    <lastmod>2024-02-28</lastmod>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/categories/Architecture/Data-Architecture/</loc>
+    <lastmod>2024-03-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/categories/Architecture/Network-Architecture/</loc>
+    <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
