@@ -2971,11 +2971,9 @@
 <h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>通过精巧地设计这三层，银行可以确保网络的高效运行和安全性。这不仅支持日常运营，还能处理高峰时段的大量金融交易。</p>
 ]]></content>
       <categories>
-        <category>Architecture</category>
-        <category>Network Architecture</category>
+        <category>Network</category>
       </categories>
       <tags>
-        <tag>Architecture</tag>
         <tag>Network</tag>
         <tag>Access Layer</tag>
         <tag>Distribution Layer</tag>

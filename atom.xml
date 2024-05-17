@@ -65,19 +65,15 @@
     <link href="https://blog.sunlan.me/2023/12/18/%E6%B5%85%E8%B0%88%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84%E5%88%86%E5%B1%82%E8%AE%BE%E8%AE%A1/"/>
     <id>https://blog.sunlan.me/2023/12/18/%E6%B5%85%E8%B0%88%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84%E5%88%86%E5%B1%82%E8%AE%BE%E8%AE%A1/</id>
     <published>2023-12-17T17:41:45.000Z</published>
-    <updated>2024-05-15T16:41:14.041Z</updated>
+    <updated>2024-05-17T20:30:07.293Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;在现代银行系统中，网络架构的设计至关重要，尤其是在处理大量数据和维护安全性方面。这种架构通常分为三层：接入层、汇聚层和核心层。接入层主要负责将终端用户设备连接到网络，并注重安全性和服务质量。汇聚层作为桥梁，处理更复杂的路由和交换决策，确保数据的高效流动。核心层则是网络的中心，处理高速数据传输和大量网络流量，对银行的关键业务数据和交易处理至关重要。每一层都采用特定的交换机和技术来满足其功能需求，确保整个网络的高效和安全运行。</summary>
     
     
     
-    <category term="Architecture" scheme="https://blog.sunlan.me/categories/Architecture/"/>
+    <category term="Network" scheme="https://blog.sunlan.me/categories/Network/"/>
     
-    <category term="Network Architecture" scheme="https://blog.sunlan.me/categories/Architecture/Network-Architecture/"/>
-    
-    
-    <category term="Architecture" scheme="https://blog.sunlan.me/tags/Architecture/"/>
     
     <category term="Network" scheme="https://blog.sunlan.me/tags/Network/"/>
     
