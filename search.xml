@@ -23,6 +23,45 @@
       </tags>
   </entry>
   <entry>
+    <title>Groovy 4之新特性GINQ预览</title>
+    <url>/2021/05/03/Groovy-4%E4%B9%8B%E6%96%B0%E7%89%B9%E6%80%A7GINQ%E9%A2%84%E8%A7%88/</url>
+    <content><![CDATA[<h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>C#最先引入LINQ特性，其强大的功能令我垂涎已久，并琢磨着为Groovy也添加类似特性，终于在Groovy 4中决定完成这一夙愿。GINQ是Groovy-Integrated Query的缩写，意在对集合的操作以类SQL的方式完成，将来或许会扩展至对数据库的支持。另外，结合Groovy的XML, JSON, YAML等文本解析特性，GINQ可天然地支持对这些文本内容进行查询。<span id="more"></span></p>
+<h2 id="原理介绍"><a href="#原理介绍" class="headerlink" title="原理介绍"></a>原理介绍</h2><p>为了保持语法的向下兼容，没有为GINQ引入新语法，而是以DSL形式实现，其处理过程如下：</p>
+<p><strong>Groovy DSL</strong>  <code>--解析--&gt;</code>  <strong>Groovy AST</strong>  <code>--转换--&gt;</code>  <strong>GINQ AST</strong>  <code>--优化--&gt;</code>  <strong>优化后的GINQ AST</strong>  <code>--生成--&gt;</code>  <strong>目标Groovy AST</strong></p>
+<h3 id="解析阶段"><a href="#解析阶段" class="headerlink" title="解析阶段"></a>解析阶段</h3><p>借助Groovy既有的解析器Parrot，将Groovy DSL源码解析为Groovy AST，该AST对于Groovy而言是通用的但缺乏“个性”，难以方便地描述GINQ的形态。</p>
+<h3 id="转换阶段"><a href="#转换阶段" class="headerlink" title="转换阶段"></a>转换阶段</h3><p>为了方便地描述GINQ，我设计了GINQ AST。在获得了Groovy AST之后，比对GINQ AST规范，将Groovy AST转换为GINQ AST。</p>
+<h3 id="优化阶段"><a href="#优化阶段" class="headerlink" title="优化阶段"></a>优化阶段</h3><p>原始GINQ AST的结构可能不是最优，需要做进一步的转换优化，比如存在先关联再筛选的情况，需要将筛选节点下沉，作用于数据源节点。</p>
+<h3 id="生成阶段"><a href="#生成阶段" class="headerlink" title="生成阶段"></a>生成阶段</h3><p>无论是操作集合还是操作数据库，都生成可实际执行的代码。为了这个目标，先将优化后的GINQ AST转换为目标代码对应的Groovy AST，然后借助Groovy既有的编译特性生成bytecode。</p>
+<h2 id="特性预览"><a href="#特性预览" class="headerlink" title="特性预览"></a>特性预览</h2><p>GINQ的代码需要放置在<code>GQ &#123;...&#125;</code>块中或者用注解<code>@GQ</code>标记的方法体内，这样Groovy便可将其识别为GINQ DSL。</p>
+<h3 id="例子1：筛选出List实例中大于1并且小于等于5的元素"><a href="#例子1：筛选出List实例中大于1并且小于等于5的元素" class="headerlink" title="例子1：筛选出List实例中大于1并且小于等于5的元素"></a>例子1：筛选出List实例中大于1并且小于等于5的元素</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> result = GQ &#123;</span><br><span class="line">    from n <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">    where n &gt; <span class="number">1</span> &amp;&amp; n &lt;= <span class="number">5</span></span><br><span class="line">    select n</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">assert</span> [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>] == result.toList()</span><br></pre></td></tr></table></figure>
+<p>注：任何Groovy的操作符均可在<code>where</code>中使用，比如<code>in</code>, <code>!in</code>等，而数据源可以是<code>Iterable</code>, <code>Stream</code>, 数组以及GINQ执行结果。</p>
+<h3 id="例子2：将List实例中的元素先按长度再按内容进行排序"><a href="#例子2：将List实例中的元素先按长度再按内容进行排序" class="headerlink" title="例子2：将List实例中的元素先按长度再按内容进行排序"></a>例子2：将List实例中的元素先按长度再按内容进行排序</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> result = GQ &#123;</span><br><span class="line">    from s <span class="keyword">in</span> [<span class="string">&#x27;ab&#x27;</span>, <span class="string">&#x27;bc&#x27;</span>, <span class="string">&#x27;abc&#x27;</span>, <span class="string">&#x27;bcd&#x27;</span>]</span><br><span class="line">    orderby s.length() <span class="keyword">in</span> desc, s</span><br><span class="line">    select s</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">assert</span> [<span class="string">&#x27;abc&#x27;</span>, <span class="string">&#x27;bcd&#x27;</span>, <span class="string">&#x27;ab&#x27;</span>, <span class="string">&#x27;bc&#x27;</span>] == result.toList()</span><br></pre></td></tr></table></figure>
+<p>注：默认升序<code>asc</code>。另外，<code>null</code>值的排序规则可通过<code>nullslast</code>以及<code>nullsfirst</code>指定，比如：<code>asc(nullslast)</code>, <code>asc(nullsfirst)</code>, <code>desc(nullslast)</code>, <code>desc(nullsfirst)</code>，而<code>asc</code>是<code>asc(nullslast)</code>的缩写，<code>desc</code>是<code>desc(nullslast)</code>的缩写。</p>
+<h3 id="例子3：在List实例中选取序号为1开始的2个元素"><a href="#例子3：在List实例中选取序号为1开始的2个元素" class="headerlink" title="例子3：在List实例中选取序号为1开始的2个元素"></a>例子3：在List实例中选取序号为1开始的2个元素</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> result = GQ &#123;</span><br><span class="line">    from n <span class="keyword">in</span> [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">    limit <span class="number">1</span>, <span class="number">2</span></span><br><span class="line">    select n</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">assert</span> [<span class="number">4</span>, <span class="number">5</span>] == result.toList()</span><br></pre></td></tr></table></figure>
+<p>注：序号从<code>0</code>开始</p>
+<h3 id="例子4：关联2个List实例并筛选满足条件的元素"><a href="#例子4：关联2个List实例并筛选满足条件的元素" class="headerlink" title="例子4：关联2个List实例并筛选满足条件的元素"></a>例子4：关联2个List实例并筛选满足条件的元素</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> result = GQ &#123;</span><br><span class="line">    from n <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">    join m <span class="keyword">in</span> [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>] on m == n</span><br><span class="line">    where n &gt; <span class="number">1</span> &amp;&amp; n &lt;= <span class="number">5</span> &amp;&amp; m &gt; <span class="number">3</span> &amp;&amp; m &lt;= <span class="number">8</span></span><br><span class="line">    select n</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">assert</span> [<span class="number">4</span>, <span class="number">5</span>] == result.toList()</span><br></pre></td></tr></table></figure>
+
+<h3 id="例子5：按模2的结果对List实例中的元素进行分组并计算"><a href="#例子5：按模2的结果对List实例中的元素进行分组并计算" class="headerlink" title="例子5：按模2的结果对List实例中的元素进行分组并计算"></a>例子5：按模2的结果对List实例中的元素进行分组并计算</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> result = GQ &#123;</span><br><span class="line">    from n <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line">    groupby n % <span class="number">2</span> <span class="keyword">as</span> k <span class="comment">// 取个别名k</span></span><br><span class="line">    select k, count(), min(n), max(n)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">assert</span> [[<span class="number">1</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">9</span>], [<span class="number">0</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">8</span>]] == result.toList()</span><br></pre></td></tr></table></figure>
+<p>注：目前已支持的聚合函数有：<code>count</code>, <code>min</code>, <code>max</code>, <code>sum</code>, <code>avg</code>, <code>median</code>, <code>stdev</code>, <code>stdevp</code>, <code>var</code>, <code>varp</code>, <code>agg</code></p>
+<h3 id="例子6：将List实例中的元素按元素长度分区再按内容降序排列并选取元素的前一个元素"><a href="#例子6：将List实例中的元素按元素长度分区再按内容降序排列并选取元素的前一个元素" class="headerlink" title="例子6：将List实例中的元素按元素长度分区再按内容降序排列并选取元素的前一个元素"></a>例子6：将List实例中的元素按元素长度分区再按内容降序排列并选取元素的前一个元素</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> result = GQ &#123;</span><br><span class="line">    from s <span class="keyword">in</span> [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;ab&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;bc&#x27;</span>]</span><br><span class="line">    select s, (lead(s) over(partitionby s.length() orderby s <span class="keyword">in</span> desc))</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">assert</span> [[<span class="string">&#x27;a&#x27;</span>, <span class="literal">null</span>], [<span class="string">&#x27;ab&#x27;</span>, <span class="literal">null</span>], [<span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;a&#x27;</span>], [<span class="string">&#x27;bc&#x27;</span>, <span class="string">&#x27;ab&#x27;</span>]] == result.toList()</span><br></pre></td></tr></table></figure>
+<p>注：目前已支持的窗口函数有：<code>rowNumber</code>, <code>rank</code>, <code>denseRank</code>, <code>percentRank</code>, <code>cumeDist</code>, <code>ntile</code>, <code>lead</code>, <code>lag</code>, <code>firstValue</code>, <code>lastValue</code>, <code>nthValue</code>, <code>count</code>, <code>min</code>, <code>max</code>, <code>sum</code>, <code>avg</code>, <code>median</code>, <code>stdev</code>, <code>stdevp</code>, <code>var</code>, <code>varp</code></p>
+<h3 id="例子7：查询JSON内容"><a href="#例子7：查询JSON内容" class="headerlink" title="例子7：查询JSON内容"></a>例子7：查询JSON内容</h3><p>先通过<code>JsonSlurper</code>将json内容解析为集合，然后利用GINQ对集合进行查询</p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> json = <span class="keyword">new</span> groovy.json.JsonSlurper().parseText(<span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    &#123;</span></span><br><span class="line"><span class="string">        &quot;fruits&quot;: [</span></span><br><span class="line"><span class="string">            &#123;&quot;name&quot;: &quot;Orange&quot;, &quot;price&quot;: 11&#125;,</span></span><br><span class="line"><span class="string">            &#123;&quot;name&quot;: &quot;Apple&quot;, &quot;price&quot;: 6&#125;,</span></span><br><span class="line"><span class="string">            &#123;&quot;name&quot;: &quot;Banana&quot;, &quot;price&quot;: 4&#125;,</span></span><br><span class="line"><span class="string">            &#123;&quot;name&quot;: &quot;Mongo&quot;, &quot;price&quot;: 29&#125;,</span></span><br><span class="line"><span class="string">            &#123;&quot;name&quot;: &quot;Durian&quot;, &quot;price&quot;: 32&#125;</span></span><br><span class="line"><span class="string">        ]</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span>)</span><br><span class="line"><span class="keyword">def</span> result = GQ &#123;</span><br><span class="line">    from f <span class="keyword">in</span> json.fruits</span><br><span class="line">    where f.price &lt; <span class="number">32</span></span><br><span class="line">    orderby f.price <span class="keyword">in</span> desc</span><br><span class="line">    select f.name, f.price</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">assert</span> [[<span class="string">&#x27;Mongo&#x27;</span>, <span class="number">29</span>], [<span class="string">&#x27;Orange&#x27;</span>, <span class="number">11</span>], [<span class="string">&#x27;Apple&#x27;</span>, <span class="number">6</span>], [<span class="string">&#x27;Banana&#x27;</span>, <span class="number">4</span>]] == result.toList()</span><br></pre></td></tr></table></figure>
+
+<h3 id="例子8：列表推导式（List-Comprehension）"><a href="#例子8：列表推导式（List-Comprehension）" class="headerlink" title="例子8：列表推导式（List Comprehension）"></a>例子8：列表推导式（List Comprehension）</h3><p>构造一个List实例，其元素是1至10中偶数的平方</p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> result = GQL &#123;from n <span class="keyword">in</span> <span class="number">1.</span>.&lt;<span class="number">11</span> where n % <span class="number">2</span> == <span class="number">0</span> select n ** <span class="number">2</span>&#125;</span><br><span class="line"><span class="keyword">assert</span> [<span class="number">4</span>, <span class="number">16</span>, <span class="number">36</span>, <span class="number">64</span>, <span class="number">100</span>] == result</span><br></pre></td></tr></table></figure>
+<p>注：<code>GQL &#123;...&#125;</code> 等价于 <code>GQ &#123;...&#125;.toList()</code></p>
+<h3 id="例子N：……"><a href="#例子N：……" class="headerlink" title="例子N：……"></a>例子N：……</h3><p>点击链接查看<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FwYWNoZS9ncm9vdnkvYmxvYi9tYXN0ZXIvc3VicHJvamVjdHMvZ3Jvb3Z5LWdpbnEvc3JjL3NwZWMvdGVzdC9vcmcvYXBhY2hlL2dyb292eS9naW5xL0dpbnFUZXN0Lmdyb292eQ==">更多例子<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="相关文章"><a href="#相关文章" class="headerlink" title="相关文章"></a>相关文章</h2><h3 id="1-GINQ官方文档"><a href="#1-GINQ官方文档" class="headerlink" title="1. GINQ官方文档"></a>1. <span class="exturl" data-url="aHR0cDovL2RvY3MuZ3Jvb3Z5LWxhbmcub3JnL2RvY3MvbmV4dC9odG1sL2RvY3VtZW50YXRpb24vI19xdWVyeWluZ19jb2xsZWN0aW9uc19pbl9zcWxfbGlrZV9zdHlsZQ==">GINQ官方文档<i class="fa fa-external-link-alt"></i></span></h3><h3 id="2-《让我们介绍Groovy的最新趋势》"><a href="#2-《让我们介绍Groovy的最新趋势》" class="headerlink" title="2. 《让我们介绍Groovy的最新趋势》"></a>2. <span class="exturl" data-url="aHR0cHM6Ly9xaWl0YS5jb20vbm9iZWFucy9pdGVtcy82NDk3YTkzNjJkY2ZjMGUxN2MwOCMlRTYlOTYlQjAlRTYlQTklOUYlRTglODMlQkQtZ2lucS11bmRlci1pbnZlc3RpZ2F0aW9u">《让我们介绍Groovy的最新趋势》<i class="fa fa-external-link-alt"></i></span></h3>]]></content>
+      <categories>
+        <category>Groovy</category>
+      </categories>
+      <tags>
+        <tag>Groovy 4</tag>
+        <tag>GINQ</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Groovy 3之新特性预览</title>
     <url>/2017/04/15/Groovy-3%E4%B9%8B%E6%96%B0%E7%89%B9%E6%80%A7%E9%A2%84%E8%A7%88/</url>
     <content><![CDATA[<h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>Groovy面世已有10多年光阴，在不断创新的同时还汲取了不少其他语言的优秀特性。目前Groovy核心团队已开始将重心逐渐转移到Groovy 3的研发上，而Groovy 3的主要亮点之一便是其全新的解析器以及更加丰富的语言特性。由于前期为Groovy研发了<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RhbmllbHN1bjExMDYvZ3Jvb3Z5LXBhcnNlcg==">这一全新的解析器<i class="fa fa-external-link-alt"></i></span>并添加了不少语言特性，<span class="exturl" data-url="aHR0cDovL21haWwtYXJjaGl2ZXMuYXBhY2hlLm9yZy9tb2RfbWJveC9ncm9vdnktdXNlcnMvMjAxNjExLm1ib3gvJTNDQ0FNYmtFN1QlMkJjc2h2eWklMkI0VFpCNndGaW1wOEIxcnlDMm1iMWdZekdZV0xkX3olM0Q4S3FRJTQwbWFpbC5nbWFpbC5jb20lM0U=">有幸受邀成为Groovy核心团队的一员<i class="fa fa-external-link-alt"></i></span>。最初我将该全新的解析器命名为“Parrot”，其含义相对比较谦卑，即“鹦鹉学舌”，学着如何说Groovy以及Java8，通过数月陆陆续续地完善，已达到一定的成熟度并<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FwYWNoZS9ncm9vdnkvY29tbWl0L2EzZjg2NzFiNWZiNmNlODNhN2MzYzY1YzA0ZDQ2NjI2ZGRiYjY0NmE=">已被纳入master分支<i class="fa fa-external-link-alt"></i></span>。<span id="more"></span></p>
@@ -114,51 +153,12 @@
       </categories>
       <tags>
         <tag>Groovy 4</tag>
+        <tag>GINQ</tag>
         <tag>Switch Expression</tag>
         <tag>Record Class</tag>
         <tag>Sealed Class</tag>
         <tag>Range</tag>
         <tag>TOML</tag>
-        <tag>GINQ</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Groovy 4之新特性GINQ预览</title>
-    <url>/2021/05/03/Groovy-4%E4%B9%8B%E6%96%B0%E7%89%B9%E6%80%A7GINQ%E9%A2%84%E8%A7%88/</url>
-    <content><![CDATA[<h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>C#最先引入LINQ特性，其强大的功能令我垂涎已久，并琢磨着为Groovy也添加类似特性，终于在Groovy 4中决定完成这一夙愿。GINQ是Groovy-Integrated Query的缩写，意在对集合的操作以类SQL的方式完成，将来或许会扩展至对数据库的支持。另外，结合Groovy的XML, JSON, YAML等文本解析特性，GINQ可天然地支持对这些文本内容进行查询。<span id="more"></span></p>
-<h2 id="原理介绍"><a href="#原理介绍" class="headerlink" title="原理介绍"></a>原理介绍</h2><p>为了保持语法的向下兼容，没有为GINQ引入新语法，而是以DSL形式实现，其处理过程如下：</p>
-<p><strong>Groovy DSL</strong>  <code>--解析--&gt;</code>  <strong>Groovy AST</strong>  <code>--转换--&gt;</code>  <strong>GINQ AST</strong>  <code>--优化--&gt;</code>  <strong>优化后的GINQ AST</strong>  <code>--生成--&gt;</code>  <strong>目标Groovy AST</strong></p>
-<h3 id="解析阶段"><a href="#解析阶段" class="headerlink" title="解析阶段"></a>解析阶段</h3><p>借助Groovy既有的解析器Parrot，将Groovy DSL源码解析为Groovy AST，该AST对于Groovy而言是通用的但缺乏“个性”，难以方便地描述GINQ的形态。</p>
-<h3 id="转换阶段"><a href="#转换阶段" class="headerlink" title="转换阶段"></a>转换阶段</h3><p>为了方便地描述GINQ，我设计了GINQ AST。在获得了Groovy AST之后，比对GINQ AST规范，将Groovy AST转换为GINQ AST。</p>
-<h3 id="优化阶段"><a href="#优化阶段" class="headerlink" title="优化阶段"></a>优化阶段</h3><p>原始GINQ AST的结构可能不是最优，需要做进一步的转换优化，比如存在先关联再筛选的情况，需要将筛选节点下沉，作用于数据源节点。</p>
-<h3 id="生成阶段"><a href="#生成阶段" class="headerlink" title="生成阶段"></a>生成阶段</h3><p>无论是操作集合还是操作数据库，都生成可实际执行的代码。为了这个目标，先将优化后的GINQ AST转换为目标代码对应的Groovy AST，然后借助Groovy既有的编译特性生成bytecode。</p>
-<h2 id="特性预览"><a href="#特性预览" class="headerlink" title="特性预览"></a>特性预览</h2><p>GINQ的代码需要放置在<code>GQ &#123;...&#125;</code>块中或者用注解<code>@GQ</code>标记的方法体内，这样Groovy便可将其识别为GINQ DSL。</p>
-<h3 id="例子1：筛选出List实例中大于1并且小于等于5的元素"><a href="#例子1：筛选出List实例中大于1并且小于等于5的元素" class="headerlink" title="例子1：筛选出List实例中大于1并且小于等于5的元素"></a>例子1：筛选出List实例中大于1并且小于等于5的元素</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> result = GQ &#123;</span><br><span class="line">    from n <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">    where n &gt; <span class="number">1</span> &amp;&amp; n &lt;= <span class="number">5</span></span><br><span class="line">    select n</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">assert</span> [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>] == result.toList()</span><br></pre></td></tr></table></figure>
-<p>注：任何Groovy的操作符均可在<code>where</code>中使用，比如<code>in</code>, <code>!in</code>等，而数据源可以是<code>Iterable</code>, <code>Stream</code>, 数组以及GINQ执行结果。</p>
-<h3 id="例子2：将List实例中的元素先按长度再按内容进行排序"><a href="#例子2：将List实例中的元素先按长度再按内容进行排序" class="headerlink" title="例子2：将List实例中的元素先按长度再按内容进行排序"></a>例子2：将List实例中的元素先按长度再按内容进行排序</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> result = GQ &#123;</span><br><span class="line">    from s <span class="keyword">in</span> [<span class="string">&#x27;ab&#x27;</span>, <span class="string">&#x27;bc&#x27;</span>, <span class="string">&#x27;abc&#x27;</span>, <span class="string">&#x27;bcd&#x27;</span>]</span><br><span class="line">    orderby s.length() <span class="keyword">in</span> desc, s</span><br><span class="line">    select s</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">assert</span> [<span class="string">&#x27;abc&#x27;</span>, <span class="string">&#x27;bcd&#x27;</span>, <span class="string">&#x27;ab&#x27;</span>, <span class="string">&#x27;bc&#x27;</span>] == result.toList()</span><br></pre></td></tr></table></figure>
-<p>注：默认升序<code>asc</code>。另外，<code>null</code>值的排序规则可通过<code>nullslast</code>以及<code>nullsfirst</code>指定，比如：<code>asc(nullslast)</code>, <code>asc(nullsfirst)</code>, <code>desc(nullslast)</code>, <code>desc(nullsfirst)</code>，而<code>asc</code>是<code>asc(nullslast)</code>的缩写，<code>desc</code>是<code>desc(nullslast)</code>的缩写。</p>
-<h3 id="例子3：在List实例中选取序号为1开始的2个元素"><a href="#例子3：在List实例中选取序号为1开始的2个元素" class="headerlink" title="例子3：在List实例中选取序号为1开始的2个元素"></a>例子3：在List实例中选取序号为1开始的2个元素</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> result = GQ &#123;</span><br><span class="line">    from n <span class="keyword">in</span> [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">    limit <span class="number">1</span>, <span class="number">2</span></span><br><span class="line">    select n</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">assert</span> [<span class="number">4</span>, <span class="number">5</span>] == result.toList()</span><br></pre></td></tr></table></figure>
-<p>注：序号从<code>0</code>开始</p>
-<h3 id="例子4：关联2个List实例并筛选满足条件的元素"><a href="#例子4：关联2个List实例并筛选满足条件的元素" class="headerlink" title="例子4：关联2个List实例并筛选满足条件的元素"></a>例子4：关联2个List实例并筛选满足条件的元素</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> result = GQ &#123;</span><br><span class="line">    from n <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">    join m <span class="keyword">in</span> [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>] on m == n</span><br><span class="line">    where n &gt; <span class="number">1</span> &amp;&amp; n &lt;= <span class="number">5</span> &amp;&amp; m &gt; <span class="number">3</span> &amp;&amp; m &lt;= <span class="number">8</span></span><br><span class="line">    select n</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">assert</span> [<span class="number">4</span>, <span class="number">5</span>] == result.toList()</span><br></pre></td></tr></table></figure>
-
-<h3 id="例子5：按模2的结果对List实例中的元素进行分组并计算"><a href="#例子5：按模2的结果对List实例中的元素进行分组并计算" class="headerlink" title="例子5：按模2的结果对List实例中的元素进行分组并计算"></a>例子5：按模2的结果对List实例中的元素进行分组并计算</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> result = GQ &#123;</span><br><span class="line">    from n <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line">    groupby n % <span class="number">2</span> <span class="keyword">as</span> k <span class="comment">// 取个别名k</span></span><br><span class="line">    select k, count(), min(n), max(n)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">assert</span> [[<span class="number">1</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">9</span>], [<span class="number">0</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">8</span>]] == result.toList()</span><br></pre></td></tr></table></figure>
-<p>注：目前已支持的聚合函数有：<code>count</code>, <code>min</code>, <code>max</code>, <code>sum</code>, <code>avg</code>, <code>median</code>, <code>stdev</code>, <code>stdevp</code>, <code>var</code>, <code>varp</code>, <code>agg</code></p>
-<h3 id="例子6：将List实例中的元素按元素长度分区再按内容降序排列并选取元素的前一个元素"><a href="#例子6：将List实例中的元素按元素长度分区再按内容降序排列并选取元素的前一个元素" class="headerlink" title="例子6：将List实例中的元素按元素长度分区再按内容降序排列并选取元素的前一个元素"></a>例子6：将List实例中的元素按元素长度分区再按内容降序排列并选取元素的前一个元素</h3><figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> result = GQ &#123;</span><br><span class="line">    from s <span class="keyword">in</span> [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;ab&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;bc&#x27;</span>]</span><br><span class="line">    select s, (lead(s) over(partitionby s.length() orderby s <span class="keyword">in</span> desc))</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">assert</span> [[<span class="string">&#x27;a&#x27;</span>, <span class="literal">null</span>], [<span class="string">&#x27;ab&#x27;</span>, <span class="literal">null</span>], [<span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;a&#x27;</span>], [<span class="string">&#x27;bc&#x27;</span>, <span class="string">&#x27;ab&#x27;</span>]] == result.toList()</span><br></pre></td></tr></table></figure>
-<p>注：目前已支持的窗口函数有：<code>rowNumber</code>, <code>rank</code>, <code>denseRank</code>, <code>percentRank</code>, <code>cumeDist</code>, <code>ntile</code>, <code>lead</code>, <code>lag</code>, <code>firstValue</code>, <code>lastValue</code>, <code>nthValue</code>, <code>count</code>, <code>min</code>, <code>max</code>, <code>sum</code>, <code>avg</code>, <code>median</code>, <code>stdev</code>, <code>stdevp</code>, <code>var</code>, <code>varp</code></p>
-<h3 id="例子7：查询JSON内容"><a href="#例子7：查询JSON内容" class="headerlink" title="例子7：查询JSON内容"></a>例子7：查询JSON内容</h3><p>先通过<code>JsonSlurper</code>将json内容解析为集合，然后利用GINQ对集合进行查询</p>
-<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> json = <span class="keyword">new</span> groovy.json.JsonSlurper().parseText(<span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    &#123;</span></span><br><span class="line"><span class="string">        &quot;fruits&quot;: [</span></span><br><span class="line"><span class="string">            &#123;&quot;name&quot;: &quot;Orange&quot;, &quot;price&quot;: 11&#125;,</span></span><br><span class="line"><span class="string">            &#123;&quot;name&quot;: &quot;Apple&quot;, &quot;price&quot;: 6&#125;,</span></span><br><span class="line"><span class="string">            &#123;&quot;name&quot;: &quot;Banana&quot;, &quot;price&quot;: 4&#125;,</span></span><br><span class="line"><span class="string">            &#123;&quot;name&quot;: &quot;Mongo&quot;, &quot;price&quot;: 29&#125;,</span></span><br><span class="line"><span class="string">            &#123;&quot;name&quot;: &quot;Durian&quot;, &quot;price&quot;: 32&#125;</span></span><br><span class="line"><span class="string">        ]</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span>)</span><br><span class="line"><span class="keyword">def</span> result = GQ &#123;</span><br><span class="line">    from f <span class="keyword">in</span> json.fruits</span><br><span class="line">    where f.price &lt; <span class="number">32</span></span><br><span class="line">    orderby f.price <span class="keyword">in</span> desc</span><br><span class="line">    select f.name, f.price</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">assert</span> [[<span class="string">&#x27;Mongo&#x27;</span>, <span class="number">29</span>], [<span class="string">&#x27;Orange&#x27;</span>, <span class="number">11</span>], [<span class="string">&#x27;Apple&#x27;</span>, <span class="number">6</span>], [<span class="string">&#x27;Banana&#x27;</span>, <span class="number">4</span>]] == result.toList()</span><br></pre></td></tr></table></figure>
-
-<h3 id="例子8：列表推导式（List-Comprehension）"><a href="#例子8：列表推导式（List-Comprehension）" class="headerlink" title="例子8：列表推导式（List Comprehension）"></a>例子8：列表推导式（List Comprehension）</h3><p>构造一个List实例，其元素是1至10中偶数的平方</p>
-<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> result = GQL &#123;from n <span class="keyword">in</span> <span class="number">1.</span>.&lt;<span class="number">11</span> where n % <span class="number">2</span> == <span class="number">0</span> select n ** <span class="number">2</span>&#125;</span><br><span class="line"><span class="keyword">assert</span> [<span class="number">4</span>, <span class="number">16</span>, <span class="number">36</span>, <span class="number">64</span>, <span class="number">100</span>] == result</span><br></pre></td></tr></table></figure>
-<p>注：<code>GQL &#123;...&#125;</code> 等价于 <code>GQ &#123;...&#125;.toList()</code></p>
-<h3 id="例子N：……"><a href="#例子N：……" class="headerlink" title="例子N：……"></a>例子N：……</h3><p>点击链接查看<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FwYWNoZS9ncm9vdnkvYmxvYi9tYXN0ZXIvc3VicHJvamVjdHMvZ3Jvb3Z5LWdpbnEvc3JjL3NwZWMvdGVzdC9vcmcvYXBhY2hlL2dyb292eS9naW5xL0dpbnFUZXN0Lmdyb292eQ==">更多例子<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="相关文章"><a href="#相关文章" class="headerlink" title="相关文章"></a>相关文章</h2><h3 id="1-GINQ官方文档"><a href="#1-GINQ官方文档" class="headerlink" title="1. GINQ官方文档"></a>1. <span class="exturl" data-url="aHR0cDovL2RvY3MuZ3Jvb3Z5LWxhbmcub3JnL2RvY3MvbmV4dC9odG1sL2RvY3VtZW50YXRpb24vI19xdWVyeWluZ19jb2xsZWN0aW9uc19pbl9zcWxfbGlrZV9zdHlsZQ==">GINQ官方文档<i class="fa fa-external-link-alt"></i></span></h3><h3 id="2-《让我们介绍Groovy的最新趋势》"><a href="#2-《让我们介绍Groovy的最新趋势》" class="headerlink" title="2. 《让我们介绍Groovy的最新趋势》"></a>2. <span class="exturl" data-url="aHR0cHM6Ly9xaWl0YS5jb20vbm9iZWFucy9pdGVtcy82NDk3YTkzNjJkY2ZjMGUxN2MwOCMlRTYlOTYlQjAlRTYlQTklOUYlRTglODMlQkQtZ2lucS11bmRlci1pbnZlc3RpZ2F0aW9u">《让我们介绍Groovy的最新趋势》<i class="fa fa-external-link-alt"></i></span></h3>]]></content>
-      <categories>
-        <category>Groovy</category>
-      </categories>
-      <tags>
-        <tag>Groovy 4</tag>
-        <tag>GINQ</tag>
       </tags>
   </entry>
   <entry>
@@ -2807,8 +2807,8 @@
 </tr>
 </tbody></table>
 <h2 id="三次握手：建立连接"><a href="#三次握手：建立连接" class="headerlink" title="三次握手：建立连接"></a>三次握手：建立连接</h2><p>三次握手是TCP/IP网络中用来建立可靠连接的过程，包括以下三个关键步骤：</p>
-<h3 id="第1次握手：SYN（同步序列编号）"><a href="#第1次握手：SYN（同步序列编号）" class="headerlink" title="第1次握手：SYN（同步序列编号）"></a>第1次握手：SYN（同步序列编号）</h3><p>客户端发送建立TCP连接的请求报文，其中报文中包含seq序列号，是由发送端随机生成的，并且将报文中的SYN字段置为1，表示需要建立TCP连接。</p>
-<h3 id="第2次握手：SYN-ACK（同步序列编号-确认）"><a href="#第2次握手：SYN-ACK（同步序列编号-确认）" class="headerlink" title="第2次握手：SYN-ACK（同步序列编号-确认）"></a>第2次握手：SYN-ACK（同步序列编号-确认）</h3><p>服务端回复客户端发送的TCP连接请求报文，其中包含seq序列号，是由回复端随机生成的，并且将SYN置为1，而且会产生ACK字段，ACK字段数值是在客户端发送过来的序列号seq的基础上加1进行回复，以便客户端收到信息时，知晓自己的TCP建立请求已得到验证。</p>
+<h3 id="第1次握手：SYN（同步序列号）"><a href="#第1次握手：SYN（同步序列号）" class="headerlink" title="第1次握手：SYN（同步序列号）"></a>第1次握手：SYN（同步序列号）</h3><p>客户端发送建立TCP连接的请求报文，其中报文中包含seq序列号，是由发送端随机生成的，并且将报文中的SYN字段置为1，表示需要建立TCP连接。</p>
+<h3 id="第2次握手：SYN-ACK（同步序列号-确认）"><a href="#第2次握手：SYN-ACK（同步序列号-确认）" class="headerlink" title="第2次握手：SYN-ACK（同步序列号-确认）"></a>第2次握手：SYN-ACK（同步序列号-确认）</h3><p>服务端回复客户端发送的TCP连接请求报文，其中包含seq序列号，是由回复端随机生成的，并且将SYN置为1，而且会产生ACK字段，ACK字段数值是在客户端发送过来的序列号seq的基础上加1进行回复，以便客户端收到信息时，知晓自己的TCP建立请求已得到验证。</p>
 <h3 id="第3次握手：ACK（确认）"><a href="#第3次握手：ACK（确认）" class="headerlink" title="第3次握手：ACK（确认）"></a>第3次握手：ACK（确认）</h3><p>客户端收到服务端发送的TCP建立验证请求后，会使自己的序列号加1表示，并且再次回复ACK验证请求，在服务端发过来的seq上加1进行回复。</p>
 <h2 id="四次挥手：终止连接"><a href="#四次挥手：终止连接" class="headerlink" title="四次挥手：终止连接"></a>四次挥手：终止连接</h2><p>终止TCP连接同样重要。四次挥手确保客户端和服务器优雅地关闭连接，确保数据不丢失。该过程包括以下四个步骤：</p>
 <h3 id="第1次挥手：FIN（结束）"><a href="#第1次挥手：FIN（结束）" class="headerlink" title="第1次挥手：FIN（结束）"></a>第1次挥手：FIN（结束）</h3><p>客户端发送断开TCP连接请求的报文，其中报文中包含seq序列号，是由发送端随机生成的，并且还将报文中的FIN字段置为1，表示需要断开TCP连接。</p>
@@ -2840,6 +2840,69 @@
         <tag>Network</tag>
         <tag>三次握手</tag>
         <tag>四次挥手</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浅谈数据仓库的分层设计</title>
+    <url>/2023/11/20/%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E5%88%86%E5%B1%82%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在构建现代数据仓库(Data Warehouse)时，分层设计方法不仅提高了数据处理的效率和质量，还增加了系统的灵活性和可扩展性，对于各种类型的业务环境都至关重要。<span id="more"></span></p>
+<h2 id="分层的意义"><a href="#分层的意义" class="headerlink" title="分层的意义"></a>分层的意义</h2><ol>
+<li><strong>效率提升</strong>：通过将数据处理分散到不同层次，提升整体系统的处理效率。每个层级专注于其特定的任务，优化数据流和处理时间。</li>
+<li><strong>数据质量和一致性</strong>：每个层级对数据进行清洗和标准化，提升数据质量，确保在整个组织中的一致性。</li>
+<li><strong>灵活性和可扩展性</strong>：分层设计提供灵活性，允许数据架构根据业务需求和技术发展进行调整和扩展。</li>
+<li><strong>针对性数据服务</strong>：每个层次针对不同用户和业务需求提供服务，确保数据在正确的时间被正确地使用。</li>
+</ol>
+<h2 id="分层示例"><a href="#分层示例" class="headerlink" title="分层示例"></a>分层示例</h2><p>以处理金融市场数据为例，简要说明数据仓库设计中的各个层级：</p>
+<ol>
+<li><p><strong>操作数据存储，也叫贴源层（Operational Data Store，ODS）</strong></p>
+<ul>
+<li><strong>数据源</strong>：实时交易数据、客户交易记录、市场行情更新等，涵盖股票、债券、外汇等多种金融产品。</li>
+<li><strong>处理</strong>：通过ETL处理，直接加载原始数据，并且保持数据原貌。</li>
+<li><strong>目的</strong>：接入来自各个渠道的数据，为更深入的分析提供实时或近实时的数据基础。</li>
+</ul>
+</li>
+<li><p><strong>数据明细层（Data Warehouse Detail，DWD）</strong></p>
+<ul>
+<li><strong>数据源</strong>：ODS层的原始数据。</li>
+<li><strong>处理</strong>：进行数据清洗和转换，确保交易数据的完整性和准确性，形成交易明细表。</li>
+<li><strong>目的</strong>：创建清洁、标准化的数据集，为数据仓库的高级分析和决策支持做好准备。</li>
+</ul>
+</li>
+<li><p><strong>数据基础层（Data Warehouse Base，DWB）或中间层（Data Warehouse Middle，DWM）</strong></p>
+<ul>
+<li><strong>数据源</strong>：DWD层的处理过的数据。</li>
+<li><strong>处理</strong>：对明细数据按照常用维度做初步的汇总，计算出常用的统计指标，存储客观数据：比如：交易产品类型按天汇总笔数，金额等，形成交易基础表。</li>
+<li><strong>目的</strong>：作为数据仓库的核心，确保数据的快速访问和高效管理，支持复杂的查询和数据挖掘。</li>
+</ul>
+</li>
+<li><p><strong>数据服务层（Data Warehouse Service，DWS）</strong></p>
+<ul>
+<li><strong>数据源</strong>：DWB/DWM层的数据。</li>
+<li><strong>处理</strong>：数据聚合和汇总，如按照时间段、产品类型或客户分群进行市场趋势分析和风险评估，形成交易主题宽表。</li>
+<li><strong>目的</strong>：提供汇总数据和高级分析，帮助管理层理解市场动态和客户行为。</li>
+</ul>
+</li>
+<li><p><strong>应用数据层（Application Data Service，ADS）</strong></p>
+<ul>
+<li><strong>数据源</strong>：DWS层的汇总数据。</li>
+<li><strong>处理</strong>：定制化数据处理，满足特定业务需求，如生成针对客户投资组合的分析报告，市场风险分析，合规性监控报告等。</li>
+<li><strong>目的</strong>：为最终用户提供直接、易于理解的数据视图和报告，支持具体的业务决策和操作。</li>
+</ul>
+</li>
+</ol>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>在任何业务环境中，尤其是数据密集型的行业，分层的数据仓库设计至关重要。它不仅提高了数据处理的效率，还确保了数据质量和一致性，为各种业务需求提供支持。这种方法的灵活性和扩展性使其成为适应快速变化的市场环境和业务需求的理想选择。</p>
+]]></content>
+      <categories>
+        <category>Data Warehouse</category>
+      </categories>
+      <tags>
+        <tag>Data Warehouse</tag>
+        <tag>ODS</tag>
+        <tag>DWD</tag>
+        <tag>DWM</tag>
+        <tag>DWB</tag>
+        <tag>DWS</tag>
+        <tag>ADS</tag>
       </tags>
   </entry>
   <entry>
@@ -2917,69 +2980,6 @@
         <tag>Access Layer</tag>
         <tag>Distribution Layer</tag>
         <tag>Core Layer</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>浅谈数据仓库的分层设计</title>
-    <url>/2023/11/20/%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E5%88%86%E5%B1%82%E8%AE%BE%E8%AE%A1/</url>
-    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在构建现代数据仓库(Data Warehouse)时，分层设计方法不仅提高了数据处理的效率和质量，还增加了系统的灵活性和可扩展性，对于各种类型的业务环境都至关重要。<span id="more"></span></p>
-<h2 id="分层的意义"><a href="#分层的意义" class="headerlink" title="分层的意义"></a>分层的意义</h2><ol>
-<li><strong>效率提升</strong>：通过将数据处理分散到不同层次，提升整体系统的处理效率。每个层级专注于其特定的任务，优化数据流和处理时间。</li>
-<li><strong>数据质量和一致性</strong>：每个层级对数据进行清洗和标准化，提升数据质量，确保在整个组织中的一致性。</li>
-<li><strong>灵活性和可扩展性</strong>：分层设计提供灵活性，允许数据架构根据业务需求和技术发展进行调整和扩展。</li>
-<li><strong>针对性数据服务</strong>：每个层次针对不同用户和业务需求提供服务，确保数据在正确的时间被正确地使用。</li>
-</ol>
-<h2 id="分层示例"><a href="#分层示例" class="headerlink" title="分层示例"></a>分层示例</h2><p>以处理金融市场数据为例，简要说明数据仓库设计中的各个层级：</p>
-<ol>
-<li><p><strong>操作数据存储，也叫贴源层（Operational Data Store，ODS）</strong></p>
-<ul>
-<li><strong>数据源</strong>：实时交易数据、客户交易记录、市场行情更新等，涵盖股票、债券、外汇等多种金融产品。</li>
-<li><strong>处理</strong>：通过ETL处理，直接加载原始数据，并且保持数据原貌。</li>
-<li><strong>目的</strong>：接入来自各个渠道的数据，为更深入的分析提供实时或近实时的数据基础。</li>
-</ul>
-</li>
-<li><p><strong>数据明细层（Data Warehouse Detail，DWD）</strong></p>
-<ul>
-<li><strong>数据源</strong>：ODS层的原始数据。</li>
-<li><strong>处理</strong>：进行数据清洗和转换，确保交易数据的完整性和准确性，形成交易明细表。</li>
-<li><strong>目的</strong>：创建清洁、标准化的数据集，为数据仓库的高级分析和决策支持做好准备。</li>
-</ul>
-</li>
-<li><p><strong>数据基础层（Data Warehouse Base，DWB）或中间层（Data Warehouse Middle，DWM）</strong></p>
-<ul>
-<li><strong>数据源</strong>：DWD层的处理过的数据。</li>
-<li><strong>处理</strong>：对明细数据按照常用维度做初步的汇总，计算出常用的统计指标，存储客观数据：比如：交易产品类型按天汇总笔数，金额等，形成交易基础表。</li>
-<li><strong>目的</strong>：作为数据仓库的核心，确保数据的快速访问和高效管理，支持复杂的查询和数据挖掘。</li>
-</ul>
-</li>
-<li><p><strong>数据服务层（Data Warehouse Service，DWS）</strong></p>
-<ul>
-<li><strong>数据源</strong>：DWB/DWM层的数据。</li>
-<li><strong>处理</strong>：数据聚合和汇总，如按照时间段、产品类型或客户分群进行市场趋势分析和风险评估，形成交易主题宽表。</li>
-<li><strong>目的</strong>：提供汇总数据和高级分析，帮助管理层理解市场动态和客户行为。</li>
-</ul>
-</li>
-<li><p><strong>应用数据层（Application Data Service，ADS）</strong></p>
-<ul>
-<li><strong>数据源</strong>：DWS层的汇总数据。</li>
-<li><strong>处理</strong>：定制化数据处理，满足特定业务需求，如生成针对客户投资组合的分析报告，市场风险分析，合规性监控报告等。</li>
-<li><strong>目的</strong>：为最终用户提供直接、易于理解的数据视图和报告，支持具体的业务决策和操作。</li>
-</ul>
-</li>
-</ol>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>在任何业务环境中，尤其是数据密集型的行业，分层的数据仓库设计至关重要。它不仅提高了数据处理的效率，还确保了数据质量和一致性，为各种业务需求提供支持。这种方法的灵活性和扩展性使其成为适应快速变化的市场环境和业务需求的理想选择。</p>
-]]></content>
-      <categories>
-        <category>Data Warehouse</category>
-      </categories>
-      <tags>
-        <tag>Data Warehouse</tag>
-        <tag>ODS</tag>
-        <tag>DWD</tag>
-        <tag>DWM</tag>
-        <tag>DWB</tag>
-        <tag>DWS</tag>
-        <tag>ADS</tag>
       </tags>
   </entry>
   <entry>
