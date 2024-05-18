@@ -497,6 +497,27 @@
   </url>
   
   <url>
+    <loc>https://blog.sunlan.me/tags/Network/</loc>
+    <lastmod>2024-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/</loc>
+    <lastmod>2024-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</loc>
+    <lastmod>2024-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.sunlan.me/tags/Data-Warehouse/</loc>
     <lastmod>2024-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -540,27 +561,6 @@
   
   <url>
     <loc>https://blog.sunlan.me/tags/ADS/</loc>
-    <lastmod>2024-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Network/</loc>
-    <lastmod>2024-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/</loc>
-    <lastmod>2024-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</loc>
     <lastmod>2024-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -758,14 +758,14 @@
   </url>
   
   <url>
-    <loc>https://blog.sunlan.me/categories/Data-Warehouse/</loc>
+    <loc>https://blog.sunlan.me/categories/Network/</loc>
     <lastmod>2024-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.sunlan.me/categories/Network/</loc>
+    <loc>https://blog.sunlan.me/categories/Data-Warehouse/</loc>
     <lastmod>2024-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
