@@ -399,20 +399,6 @@
   </url>
   
   <url>
-    <loc>https://blog.sunlan.me/tags/Architecture/</loc>
-    <lastmod>2024-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.sunlan.me/tags/Governance/</loc>
-    <lastmod>2024-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.sunlan.me/tags/Virtual-Thread/</loc>
     <lastmod>2024-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -449,6 +435,20 @@
   
   <url>
     <loc>https://blog.sunlan.me/tags/Loom/</loc>
+    <lastmod>2024-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Architecture/</loc>
+    <lastmod>2024-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.sunlan.me/tags/Governance/</loc>
     <lastmod>2024-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
