@@ -6,7 +6,7 @@
   <link href="https://blog.sunlan.me/atom.xml" rel="self"/>
   
   <link href="https://blog.sunlan.me/"/>
-  <updated>2024-05-18T10:28:38.100Z</updated>
+  <updated>2024-05-19T17:59:40.415Z</updated>
   <id>https://blog.sunlan.me/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.sunlan.me/2024/05/18/%E6%B5%85%E8%B0%88TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/"/>
     <id>https://blog.sunlan.me/2024/05/18/%E6%B5%85%E8%B0%88TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</id>
     <published>2024-05-17T17:42:18.000Z</published>
-    <updated>2024-05-18T10:28:38.100Z</updated>
+    <updated>2024-05-19T17:59:40.415Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;在计算机网络中，TCP是实现可靠数据传输的重要协议。TCP通过三次握手（Three-Way Handshake）来建立连接，通过四次挥手（Four-Way Termination）来终止连接，确保数据传输的可靠性和连接管理的完整性。三次握手确保双方在通信前建立同步连接，防止重复数据包的干扰，确保序列号的同步。四次挥手则确保双方在连接终止时都能完全释放资源，防止数据丢失，并确保网络中不存在旧的数据包，从而避免新的连接受到干扰。理解这些过程对于排查网络问题和设计可靠的网络应用至关重要。</summary>
