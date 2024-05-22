@@ -3,7 +3,7 @@
   <entry>
     <title>2024年为何依然选择Groovy</title>
     <url>/2024/05/23/2024%E5%B9%B4%E4%B8%BA%E4%BD%95%E4%BE%9D%E7%84%B6%E9%80%89%E6%8B%A9Groovy/</url>
-    <content><![CDATA[<h2 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h2><p>Groovy语言在简洁性、灵活性和功能特性等方面具备独特优势，使其在2024年依然是开发者值得掌握的编程语言。<span id="more"></span></p>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Groovy语言在简洁性、灵活性和功能特性等方面具备独特优势，使其在2024年依然是开发者值得掌握的编程语言。<span id="more"></span></p>
 <h2 id="主要优势"><a href="#主要优势" class="headerlink" title="主要优势"></a>主要优势</h2><ol>
 <li><p><strong>扩展方法</strong>：</p>
 <ul>
@@ -369,6 +369,15 @@
       </tags>
   </entry>
   <entry>
+    <title>My first blog</title>
+    <url>/2017/03/19/My-first-blog/</url>
+    <content><![CDATA[<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">println <span class="string">&quot;Hello, world!&quot;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+  </entry>
+  <entry>
     <title>JVM Bytecode之invokedynamic漫谈</title>
     <url>/2023/01/14/JVM-Bytecode%E4%B9%8Binvokedynamic%E6%BC%AB%E8%B0%88/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>invokedynamic是直到Java 7才引入的bytecode指令，当初设计该指令时，是为了方便JVM动态语言的实现，比如Groovy、JRuby、Jython等，而其真正被Java界关注到则是从Java 8开始，因为Java 8引入了Lambda Expression以及Method Reference这两大特性，其实现便是基于invokedynamic指令完成的。<span id="more"></span></p>
@@ -403,15 +412,6 @@
         <tag>invokedynamic</tag>
         <tag>Reflection</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>My first blog</title>
-    <url>/2017/03/19/My-first-blog/</url>
-    <content><![CDATA[<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">println <span class="string">&quot;Hello, world!&quot;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
   </entry>
   <entry>
     <title>MyBatis之查询返回记录字段不全问题的解决方法</title>
