@@ -6,7 +6,7 @@
   <link href="https://blog.sunlan.me/atom.xml" rel="self"/>
   
   <link href="https://blog.sunlan.me/"/>
-  <updated>2024-05-19T17:59:40.415Z</updated>
+  <updated>2024-05-22T17:56:56.450Z</updated>
   <id>https://blog.sunlan.me/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2024年为何依然选择Groovy</title>
+    <link href="https://blog.sunlan.me/2024/05/23/2024%E5%B9%B4%E4%B8%BA%E4%BD%95%E4%BE%9D%E7%84%B6%E9%80%89%E6%8B%A9Groovy/"/>
+    <id>https://blog.sunlan.me/2024/05/23/2024%E5%B9%B4%E4%B8%BA%E4%BD%95%E4%BE%9D%E7%84%B6%E9%80%89%E6%8B%A9Groovy/</id>
+    <published>2024-05-22T17:37:31.000Z</published>
+    <updated>2024-05-22T17:56:56.450Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;概况&quot;&gt;&lt;a href=&quot;#概况&quot; class=&quot;headerlink&quot; title=&quot;概况&quot;&gt;&lt;/a&gt;概况&lt;/h2&gt;&lt;p&gt;Groovy语言在简洁性、灵活性和功能特性等方面具备独特优势，使其在2024年依然是开发者值得掌握的编程语言。</summary>
+    
+    
+    
+    <category term="Groovy" scheme="https://blog.sunlan.me/categories/Groovy/"/>
+    
+    
+    <category term="Groovy优势" scheme="https://blog.sunlan.me/tags/Groovy%E4%BC%98%E5%8A%BF/"/>
+    
+    <category term="扩展方法" scheme="https://blog.sunlan.me/tags/%E6%89%A9%E5%B1%95%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="操作符重载" scheme="https://blog.sunlan.me/tags/%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%87%8D%E8%BD%BD/"/>
+    
+    <category term="AST转换" scheme="https://blog.sunlan.me/tags/AST%E8%BD%AC%E6%8D%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>浅谈TCP三次握手和四次挥手</title>
@@ -489,27 +514,6 @@
     
     
     <category term="MyBatis" scheme="https://blog.sunlan.me/tags/MyBatis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Groovy 3之新特性预览</title>
-    <link href="https://blog.sunlan.me/2017/04/15/Groovy-3%E4%B9%8B%E6%96%B0%E7%89%B9%E6%80%A7%E9%A2%84%E8%A7%88/"/>
-    <id>https://blog.sunlan.me/2017/04/15/Groovy-3%E4%B9%8B%E6%96%B0%E7%89%B9%E6%80%A7%E9%A2%84%E8%A7%88/</id>
-    <published>2017-04-14T17:17:32.000Z</published>
-    <updated>2024-05-15T16:41:13.980Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;背景介绍&quot;&gt;&lt;a href=&quot;#背景介绍&quot; class=&quot;headerlink&quot; title=&quot;背景介绍&quot;&gt;&lt;/a&gt;背景介绍&lt;/h2&gt;&lt;p&gt;Groovy面世已有10多年光阴，在不断创新的同时还汲取了不少其他语言的优秀特性。目前Groovy核心团队已开始将重心逐渐转移到Groovy 3的研发上，而Groovy 3的主要亮点之一便是其全新的解析器以及更加丰富的语言特性。由于前期为Groovy研发了&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2RhbmllbHN1bjExMDYvZ3Jvb3Z5LXBhcnNlcg==&quot;&gt;这一全新的解析器&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;并添加了不少语言特性，&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cDovL21haWwtYXJjaGl2ZXMuYXBhY2hlLm9yZy9tb2RfbWJveC9ncm9vdnktdXNlcnMvMjAxNjExLm1ib3gvJTNDQ0FNYmtFN1QlMkJjc2h2eWklMkI0VFpCNndGaW1wOEIxcnlDMm1iMWdZekdZV0xkX3olM0Q4S3FRJTQwbWFpbC5nbWFpbC5jb20lM0U=&quot;&gt;有幸受邀成为Groovy核心团队的一员&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;。最初我将该全新的解析器命名为“Parrot”，其含义相对比较谦卑，即“鹦鹉学舌”，学着如何说Groovy以及Java8，通过数月陆陆续续地完善，已达到一定的成熟度并&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2FwYWNoZS9ncm9vdnkvY29tbWl0L2EzZjg2NzFiNWZiNmNlODNhN2MzYzY1YzA0ZDQ2NjI2ZGRiYjY0NmE=&quot;&gt;已被纳入master分支&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;。</summary>
-    
-    
-    
-    <category term="Groovy" scheme="https://blog.sunlan.me/categories/Groovy/"/>
-    
-    
-    <category term="Groovy 3" scheme="https://blog.sunlan.me/tags/Groovy-3/"/>
-    
-    <category term="Parrot Parser" scheme="https://blog.sunlan.me/tags/Parrot-Parser/"/>
     
   </entry>
   
