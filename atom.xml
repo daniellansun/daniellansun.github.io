@@ -6,7 +6,7 @@
   <link href="https://blog.sunlan.me/atom.xml" rel="self"/>
   
   <link href="https://blog.sunlan.me/"/>
-  <updated>2024-05-29T21:13:19.744Z</updated>
+  <updated>2024-05-29T21:22:26.134Z</updated>
   <id>https://blog.sunlan.me/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.sunlan.me/2024/05/30/GINQ%E5%BA%94%E7%94%A8%E4%B9%8BGit%E7%BB%9F%E8%AE%A1/"/>
     <id>https://blog.sunlan.me/2024/05/30/GINQ%E5%BA%94%E7%94%A8%E4%B9%8BGit%E7%BB%9F%E8%AE%A1/</id>
     <published>2024-05-29T20:45:32.000Z</published>
-    <updated>2024-05-29T21:13:19.744Z</updated>
+    <updated>2024-05-29T21:22:26.134Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;GINQ是Groovy 4主要新特性之一，在之前的《&lt;a href=&quot;/2021/05/03/Groovy-4%E4%B9%8B%E6%96%B0%E7%89%B9%E6%80%A7GINQ%E9%A2%84%E8%A7%88/&quot; title=&quot;Groovy 4之新特性GINQ预览&quot;&gt;Groovy 4之新特性GINQ预览&lt;/a&gt;》中已经介绍过其原理和用法。而本文将通过一个Groovy脚本来展示GINQ在实战中的应用。</summary>
