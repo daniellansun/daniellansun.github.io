@@ -6,7 +6,7 @@
   <link href="https://blog.sunlan.me/atom.xml" rel="self"/>
   
   <link href="https://blog.sunlan.me/"/>
-  <updated>2024-05-22T18:43:31.225Z</updated>
+  <updated>2024-05-29T21:13:19.744Z</updated>
   <id>https://blog.sunlan.me/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GINQ应用之Git统计</title>
+    <link href="https://blog.sunlan.me/2024/05/30/GINQ%E5%BA%94%E7%94%A8%E4%B9%8BGit%E7%BB%9F%E8%AE%A1/"/>
+    <id>https://blog.sunlan.me/2024/05/30/GINQ%E5%BA%94%E7%94%A8%E4%B9%8BGit%E7%BB%9F%E8%AE%A1/</id>
+    <published>2024-05-29T20:45:32.000Z</published>
+    <updated>2024-05-29T21:13:19.744Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;GINQ是Groovy 4主要新特性之一，在之前的《&lt;a href=&quot;/2021/05/03/Groovy-4%E4%B9%8B%E6%96%B0%E7%89%B9%E6%80%A7GINQ%E9%A2%84%E8%A7%88/&quot; title=&quot;Groovy 4之新特性GINQ预览&quot;&gt;Groovy 4之新特性GINQ预览&lt;/a&gt;》中已经介绍过其原理和用法。而本文将通过一个Groovy脚本来展示GINQ在实战中的应用。</summary>
+    
+    
+    
+    <category term="Groovy" scheme="https://blog.sunlan.me/categories/Groovy/"/>
+    
+    
+    <category term="GINQ" scheme="https://blog.sunlan.me/tags/GINQ/"/>
+    
+    <category term="Git" scheme="https://blog.sunlan.me/tags/Git/"/>
+    
+    <category term="统计" scheme="https://blog.sunlan.me/tags/%E7%BB%9F%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>2024年为何依然选择Groovy</title>
@@ -415,9 +438,9 @@
     <category term="Groovy" scheme="https://blog.sunlan.me/categories/Groovy/"/>
     
     
-    <category term="Groovy 4" scheme="https://blog.sunlan.me/tags/Groovy-4/"/>
-    
     <category term="GINQ" scheme="https://blog.sunlan.me/tags/GINQ/"/>
+    
+    <category term="Groovy 4" scheme="https://blog.sunlan.me/tags/Groovy-4/"/>
     
     <category term="Switch Expression" scheme="https://blog.sunlan.me/tags/Switch-Expression/"/>
     
@@ -446,9 +469,9 @@
     <category term="Groovy" scheme="https://blog.sunlan.me/categories/Groovy/"/>
     
     
-    <category term="Groovy 4" scheme="https://blog.sunlan.me/tags/Groovy-4/"/>
-    
     <category term="GINQ" scheme="https://blog.sunlan.me/tags/GINQ/"/>
+    
+    <category term="Groovy 4" scheme="https://blog.sunlan.me/tags/Groovy-4/"/>
     
   </entry>
   
@@ -495,25 +518,6 @@
     <category term="Method Reference" scheme="https://blog.sunlan.me/tags/Method-Reference/"/>
     
     <category term="Constructor Reference" scheme="https://blog.sunlan.me/tags/Constructor-Reference/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MyBatis之查询返回记录字段不全问题的解决方法</title>
-    <link href="https://blog.sunlan.me/2017/04/28/MyBatis%E4%B9%8B%E6%9F%A5%E8%AF%A2%E8%BF%94%E5%9B%9E%E8%AE%B0%E5%BD%95%E5%AD%97%E6%AE%B5%E4%B8%8D%E5%85%A8%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
-    <id>https://blog.sunlan.me/2017/04/28/MyBatis%E4%B9%8B%E6%9F%A5%E8%AF%A2%E8%BF%94%E5%9B%9E%E8%AE%B0%E5%BD%95%E5%AD%97%E6%AE%B5%E4%B8%8D%E5%85%A8%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</id>
-    <published>2017-04-27T17:09:50.000Z</published>
-    <updated>2024-05-15T16:41:14.035Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;问题现象&quot;&gt;&lt;a href=&quot;#问题现象&quot; class=&quot;headerlink&quot; title=&quot;问题现象&quot;&gt;&lt;/a&gt;问题现象&lt;/h2&gt;&lt;p&gt;当select的返回记录类型设置为map(或者其他Map类型，比如java.util.HashMap等)时，返回的map对象可能并未包含所有字段，即只出现有值的字段，而这恰恰是MyBatis的默认处理方式。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="MyBatis" scheme="https://blog.sunlan.me/categories/MyBatis/"/>
-    
-    
-    <category term="MyBatis" scheme="https://blog.sunlan.me/tags/MyBatis/"/>
     
   </entry>
   
