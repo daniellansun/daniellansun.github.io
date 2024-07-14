@@ -6,7 +6,7 @@
   <link href="https://blog.sunlan.me/atom.xml" rel="self"/>
   
   <link href="https://blog.sunlan.me/"/>
-  <updated>2024-06-01T21:41:04.398Z</updated>
+  <updated>2024-07-14T16:59:04.632Z</updated>
   <id>https://blog.sunlan.me/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java各大版本新特性及改进概览</title>
+    <link href="https://blog.sunlan.me/2024/07/15/Java%E5%90%84%E5%A4%A7%E7%89%88%E6%9C%AC%E6%96%B0%E7%89%B9%E6%80%A7%E5%8F%8A%E6%94%B9%E8%BF%9B%E6%A6%82%E8%A7%88/"/>
+    <id>https://blog.sunlan.me/2024/07/15/Java%E5%90%84%E5%A4%A7%E7%89%88%E6%9C%AC%E6%96%B0%E7%89%B9%E6%80%A7%E5%8F%8A%E6%94%B9%E8%BF%9B%E6%A6%82%E8%A7%88/</id>
+    <published>2024-07-14T16:36:08.000Z</published>
+    <updated>2024-07-14T16:59:04.632Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;在过去的几年中，Java通过不断的版本更新，持续引入了许多新的特性和改进，令Java语言屹立在编程语言之林。本文将介绍从Java 7到Java 22的主要新特性及改进，回顾Java语言演进的心路历程。</summary>
+    
+    
+    
+    <category term="Java" scheme="https://blog.sunlan.me/categories/Java/"/>
+    
+    
+    <category term="Java新特性及改进" scheme="https://blog.sunlan.me/tags/Java%E6%96%B0%E7%89%B9%E6%80%A7%E5%8F%8A%E6%94%B9%E8%BF%9B/"/>
+    
+  </entry>
   
   <entry>
     <title>GINQ应用之Git统计</title>
@@ -438,9 +457,9 @@
     <category term="Groovy" scheme="https://blog.sunlan.me/categories/Groovy/"/>
     
     
-    <category term="Groovy 4" scheme="https://blog.sunlan.me/tags/Groovy-4/"/>
-    
     <category term="GINQ" scheme="https://blog.sunlan.me/tags/GINQ/"/>
+    
+    <category term="Groovy 4" scheme="https://blog.sunlan.me/tags/Groovy-4/"/>
     
     <category term="Switch Expression" scheme="https://blog.sunlan.me/tags/Switch-Expression/"/>
     
@@ -469,9 +488,9 @@
     <category term="Groovy" scheme="https://blog.sunlan.me/categories/Groovy/"/>
     
     
-    <category term="Groovy 4" scheme="https://blog.sunlan.me/tags/Groovy-4/"/>
-    
     <category term="GINQ" scheme="https://blog.sunlan.me/tags/GINQ/"/>
+    
+    <category term="Groovy 4" scheme="https://blog.sunlan.me/tags/Groovy-4/"/>
     
   </entry>
   
@@ -491,33 +510,6 @@
     
     
     <category term="Groovy History" scheme="https://blog.sunlan.me/tags/Groovy-History/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Groovy 3之Native Lambda及Method/Constructor Reference</title>
-    <link href="https://blog.sunlan.me/2018/02/18/Groovy-3%E4%B9%8BNative-Lambda%E5%8F%8AMethod-Constructor-Reference/"/>
-    <id>https://blog.sunlan.me/2018/02/18/Groovy-3%E4%B9%8BNative-Lambda%E5%8F%8AMethod-Constructor-Reference/</id>
-    <published>2018-02-17T17:06:30.000Z</published>
-    <updated>2024-05-15T16:41:13.979Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;虽然Groovy 3 Alpha版本就已经支持Java 8的Lambda、Method Reference以及Constructor Reference全部语法，但从bytecode层面来看，其本质上依然是Closure及Method Pointer，换言之，只是语法上的兼容，但性能上并没有提升。而Groovy的性能常为人诟病，所以Groovy 2引入了静态编译，其编译出来的bytecode跟Java的相近，所以其性能逼近Java。为了延续静态编译的性能优势，Groovy核心团队决定在Groovy 3 Beta版本中实现Lambda、Method Reference以及Constructor Reference的Native版本，其语法不变，但生成的bytecode与Java的相似，这便是”Native”的由来。</summary>
-    
-    
-    
-    <category term="Groovy" scheme="https://blog.sunlan.me/categories/Groovy/"/>
-    
-    
-    <category term="Groovy 3" scheme="https://blog.sunlan.me/tags/Groovy-3/"/>
-    
-    <category term="Closure" scheme="https://blog.sunlan.me/tags/Closure/"/>
-    
-    <category term="Lambda" scheme="https://blog.sunlan.me/tags/Lambda/"/>
-    
-    <category term="Method Reference" scheme="https://blog.sunlan.me/tags/Method-Reference/"/>
-    
-    <category term="Constructor Reference" scheme="https://blog.sunlan.me/tags/Constructor-Reference/"/>
     
   </entry>
   
