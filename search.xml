@@ -448,7 +448,7 @@
 <td>1. Region Pinning for G1（G1垃圾收集器的区域固定）<br>2. Statements before super(…) (Preview)（super(…)之前的语句（预览））<br>3. Foreign Function and Memory API（外部函数和内存API）<br>4. Unnamed Variables &amp; Patterns（未命名变量和模式）<br>5. Class-File API (Preview)（类文件API（预览））<br>6. String Templates (2nd Preview)（字符串模板（第二次预览））<br>7. Vector API (7th Incubator)（矢量API（第七次孵化））<br>8. Stream Gatherers (Preview)（流收集器（预览））<br>9. Structured Concurrency (2nd Preview)（结构化并发（第二次预览））<br>10. Implicitly Declared Classes and Instance Main Methods (2nd Preview)（隐式声明类和实例主方法（第二次预览））<br>11. Scoped Values（作用域值）</td>
 </tr>
 <tr>
-<td><strong>Java 21</strong></td>
+<td><strong>Java 21 (LTS)</strong></td>
 <td>1. String Templates (Preview)（字符串模板（预览））<br>2. Sequenced Collections（序列化集合）<br>3. Generational ZGC（代际ZGC）<br>4. Record Patterns（记录模式）<br>5. Pattern Matching for switch（switch的模式匹配）<br>6. Foreign Function &amp; Memory API (Third Preview)（外部函数和内存API（第三次预览））<br>7. Unnamed Patterns and Variables (Preview)（未命名模式和变量（预览））<br>8. Virtual Threads（虚拟线程）<br>9. Scoped Values (Preview)（作用域值（预览））<br>10. Vector API (6th Incubator)（矢量API（第六次孵化））<br>11. Deprecate the Windows 32 bit x86 Port for Removal（准备移除Windows 32位x86端口）<br>12. Prepare to Disallow the Dynamic Loading of Agents（准备禁止动态加载代理）<br>13. Key Encapsulation Mechanism API（密钥封装机制API）<br>14. Structured Concurrency (Preview)（结构化并发（预览））</td>
 </tr>
 <tr>
@@ -464,7 +464,7 @@
 <td>1. Deprecate Finalization for Removal（标记finalization为移除）<br>2. Internet Address Resolution SPI（互联网地址解析SPI）<br>3. Pattern Matching for switch (2nd Preview)（switch的模式匹配（第二次预览））<br>4. Reimplementation of Core Reflection using Method Handles（使用方法句柄重新实现核心反射）<br>5. Small Simple Web Server（小型简单的Web服务器）<br>6. Foreign Memory API (2nd Incubator)（外部内存API（第二次孵化））<br>7. Vector API (3rd Incubator)（矢量API（第三次孵化））<br>8. UTF-8 as Standard Charset（默认字符集为UTF-8）<br>9. Code Snippets in JavaDoc via @snippet Tag（在JavaDoc中通过@snippet标签编写代码片段）</td>
 </tr>
 <tr>
-<td><strong>Java 17</strong></td>
+<td><strong>Java 17 (LTS)</strong></td>
 <td>1. Restore Always-Strict Floating-Point Semantics（恢复严格浮点语义）<br>2. Enhanced Pseudo-Random Number Generators（增强伪随机数生成器）<br>3. New MacOS Rendering Pipeline（新的MacOS渲染管道）<br>4. macOS/AArch64 Port（macOS/AArch64端口）<br>5. Deprecate Applet API for Removal（标记Applet API为移除）<br>6. Strongly Encapsulate JDK Internals（强封装JDK内部）<br>7. Pattern Matching for switch（switch的模式匹配）<br>8. Remove RMI Activation（移除RMI激活）<br>9. Sealed Classes（密封类）<br>10. Remove Experimental AOT and JIT Compiler（移除实验性的AOT和JIT编译器）<br>11. Deprecate SecurityManager for Removal（标记SecurityManager为移除）<br>12. Foreign Function and Memory API (Incubator)（外部函数和内存API（孵化））<br>13. Vector API (2nd Incubator)（矢量API（第二次孵化））<br>14. Context-Specific Deserialization Filters（上下文特定的反序列化过滤器）</td>
 </tr>
 <tr>
@@ -488,7 +488,7 @@
 <td>1. Shenandoah GC（Shenandoah GC）<br>2. Switch Expressions (Preview)（switch表达式（预览））<br>3. JVM Constants API（JVM常量API）<br>4. Abortable Mixed Collections in G1（G1中的可中止混合集合）<br>5. Promptly Return Unused Committed Memory from G1（及时返回G1未使用的已提交内存）</td>
 </tr>
 <tr>
-<td><strong>Java 11</strong></td>
+<td><strong>Java 11 (LTS)</strong></td>
 <td>1. Removed Java EE and CORBA Modules（移除Java EE和CORBA模块）<br>2. HTTP Client (Standard)（标准化HTTP客户端）<br>3. var in Lambda Expressions（lambda表达式中的var关键字）<br>4. Elliptic Curve Cryptography（椭圆曲线密码协议）<br>5. Unicode 10（Unicode 10）<br>6. New Cryptographic Algorithms（新的加密算法）<br>7. Launch Single-File Source Code Programs（启动单文件源代码程序）<br>8. TLS 1.3 Support（支持TLS 1.3）<br>9. Deprecate Nashorn JavaScript Engine（标记Nashorn JavaScript引擎为弃用）</td>
 </tr>
 <tr>
@@ -500,7 +500,7 @@
 <td>1. Java Modules（Java模块）<br>2. Java Reflection Module Class（Java反射模块类）<br>3. Try With Resources Enhancement（try-with-resources增强）<br>4. Compact Strings（紧凑字符串）<br>5. Java Microbenchmark Harness (JMH)（Java微基准测试工具（JMH））</td>
 </tr>
 <tr>
-<td><strong>Java 8</strong></td>
+<td><strong>Java 8 (LTS)</strong></td>
 <td>1. Lambda Expressions（lambda表达式）<br>2. Streams API（Streams API）<br>3. JavaFX（JavaFX）<br>4. Nashorn JavaScript Engine（Nashorn JavaScript引擎）</td>
 </tr>
 <tr>
@@ -525,6 +525,23 @@
       <categories>
         <category>其他</category>
       </categories>
+  </entry>
+  <entry>
+    <title>MyBatis之查询返回记录字段不全问题的解决方法</title>
+    <url>/2017/04/28/MyBatis%E4%B9%8B%E6%9F%A5%E8%AF%A2%E8%BF%94%E5%9B%9E%E8%AE%B0%E5%BD%95%E5%AD%97%E6%AE%B5%E4%B8%8D%E5%85%A8%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="问题现象"><a href="#问题现象" class="headerlink" title="问题现象"></a>问题现象</h2><p>当select的返回记录类型设置为map(或者其他Map类型，比如java.util.HashMap等)时，返回的map对象可能并未包含所有字段，即只出现有值的字段，而这恰恰是MyBatis的默认处理方式。</p>
+<span id="more"></span>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span>  <span class="attr">...</span>  <span class="attr">resultType</span>=<span class="string">&quot;map&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>为了解决记录字段不全这个问题，我们可以在<code>settings</code>中增加callSettersOnNulls的设置，如下所示：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">settings</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">&quot;callSettersOnNulls&quot;</span> <span class="attr">value</span>=<span class="string">&quot;true&quot;</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>解决方案就这么简单，但研究MyBatis源码以分析解决该问题略微坎坷，希望对大家有用。</p>
+]]></content>
+      <categories>
+        <category>MyBatis</category>
+      </categories>
+      <tags>
+        <tag>MyBatis</tag>
+      </tags>
   </entry>
   <entry>
     <title>企业总体架构管控原则</title>
@@ -983,23 +1000,6 @@
         <tag>Concurrent Programming</tag>
         <tag>Coroutine</tag>
         <tag>Loom</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MyBatis之查询返回记录字段不全问题的解决方法</title>
-    <url>/2017/04/28/MyBatis%E4%B9%8B%E6%9F%A5%E8%AF%A2%E8%BF%94%E5%9B%9E%E8%AE%B0%E5%BD%95%E5%AD%97%E6%AE%B5%E4%B8%8D%E5%85%A8%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="问题现象"><a href="#问题现象" class="headerlink" title="问题现象"></a>问题现象</h2><p>当select的返回记录类型设置为map(或者其他Map类型，比如java.util.HashMap等)时，返回的map对象可能并未包含所有字段，即只出现有值的字段，而这恰恰是MyBatis的默认处理方式。</p>
-<span id="more"></span>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span>  <span class="attr">...</span>  <span class="attr">resultType</span>=<span class="string">&quot;map&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>为了解决记录字段不全这个问题，我们可以在<code>settings</code>中增加callSettersOnNulls的设置，如下所示：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">settings</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">&quot;callSettersOnNulls&quot;</span> <span class="attr">value</span>=<span class="string">&quot;true&quot;</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span> </span><br></pre></td></tr></table></figure>
-<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>解决方案就这么简单，但研究MyBatis源码以分析解决该问题略微坎坷，希望对大家有用。</p>
-]]></content>
-      <categories>
-        <category>MyBatis</category>
-      </categories>
-      <tags>
-        <tag>MyBatis</tag>
       </tags>
   </entry>
   <entry>
@@ -3048,69 +3048,6 @@
       </tags>
   </entry>
   <entry>
-    <title>浅谈数据仓库的分层设计</title>
-    <url>/2023/11/20/%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E5%88%86%E5%B1%82%E8%AE%BE%E8%AE%A1/</url>
-    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在构建现代数据仓库(Data Warehouse)时，分层设计方法不仅提高了数据处理的效率和质量，还增加了系统的灵活性和可扩展性，对于各种类型的业务环境都至关重要。<span id="more"></span></p>
-<h2 id="分层的意义"><a href="#分层的意义" class="headerlink" title="分层的意义"></a>分层的意义</h2><ol>
-<li><strong>效率提升</strong>：通过将数据处理分散到不同层次，提升整体系统的处理效率。每个层级专注于其特定的任务，优化数据流和处理时间。</li>
-<li><strong>数据质量和一致性</strong>：每个层级对数据进行清洗和标准化，提升数据质量，确保在整个组织中的一致性。</li>
-<li><strong>灵活性和可扩展性</strong>：分层设计提供灵活性，允许数据架构根据业务需求和技术发展进行调整和扩展。</li>
-<li><strong>针对性数据服务</strong>：每个层次针对不同用户和业务需求提供服务，确保数据在正确的时间被正确地使用。</li>
-</ol>
-<h2 id="分层示例"><a href="#分层示例" class="headerlink" title="分层示例"></a>分层示例</h2><p>以处理金融市场数据为例，简要说明数据仓库设计中的各个层级：</p>
-<ol>
-<li><p><strong>操作数据存储，也叫贴源层（Operational Data Store，ODS）</strong></p>
-<ul>
-<li><strong>数据源</strong>：实时交易数据、客户交易记录、市场行情更新等，涵盖股票、债券、外汇等多种金融产品。</li>
-<li><strong>处理</strong>：通过ETL处理，直接加载原始数据，并且保持数据原貌。</li>
-<li><strong>目的</strong>：接入来自各个渠道的数据，为更深入的分析提供实时或近实时的数据基础。</li>
-</ul>
-</li>
-<li><p><strong>数据明细层（Data Warehouse Detail，DWD）</strong></p>
-<ul>
-<li><strong>数据源</strong>：ODS层的原始数据。</li>
-<li><strong>处理</strong>：进行数据清洗和转换，确保交易数据的完整性和准确性，形成交易明细表。</li>
-<li><strong>目的</strong>：创建清洁、标准化的数据集，为数据仓库的高级分析和决策支持做好准备。</li>
-</ul>
-</li>
-<li><p><strong>数据基础层（Data Warehouse Base，DWB）或中间层（Data Warehouse Middle，DWM）</strong></p>
-<ul>
-<li><strong>数据源</strong>：DWD层的处理过的数据。</li>
-<li><strong>处理</strong>：对明细数据按照常用维度做初步的汇总，计算出常用的统计指标，存储客观数据：比如：交易产品类型按天汇总笔数，金额等，形成交易基础表。</li>
-<li><strong>目的</strong>：作为数据仓库的核心，确保数据的快速访问和高效管理，支持复杂的查询和数据挖掘。</li>
-</ul>
-</li>
-<li><p><strong>数据服务层（Data Warehouse Service，DWS）</strong></p>
-<ul>
-<li><strong>数据源</strong>：DWB/DWM层的数据。</li>
-<li><strong>处理</strong>：数据聚合和汇总，如按照时间段、产品类型或客户分群进行市场趋势分析和风险评估，形成交易主题宽表。</li>
-<li><strong>目的</strong>：提供汇总数据和高级分析，帮助管理层理解市场动态和客户行为。</li>
-</ul>
-</li>
-<li><p><strong>应用数据层（Application Data Service，ADS）</strong></p>
-<ul>
-<li><strong>数据源</strong>：DWS层的汇总数据。</li>
-<li><strong>处理</strong>：定制化数据处理，满足特定业务需求，如生成针对客户投资组合的分析报告，市场风险分析，合规性监控报告等。</li>
-<li><strong>目的</strong>：为最终用户提供直接、易于理解的数据视图和报告，支持具体的业务决策和操作。</li>
-</ul>
-</li>
-</ol>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>在任何业务环境中，尤其是数据密集型的行业，分层的数据仓库设计至关重要。它不仅提高了数据处理的效率，还确保了数据质量和一致性，为各种业务需求提供支持。这种方法的灵活性和扩展性使其成为适应快速变化的市场环境和业务需求的理想选择。</p>
-]]></content>
-      <categories>
-        <category>Data Warehouse</category>
-      </categories>
-      <tags>
-        <tag>Data Warehouse</tag>
-        <tag>ODS</tag>
-        <tag>DWD</tag>
-        <tag>DWM</tag>
-        <tag>DWB</tag>
-        <tag>DWS</tag>
-        <tag>ADS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>浅谈数据架构及实践</title>
     <url>/2023/12/03/%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E6%9E%B6%E6%9E%84%E5%8F%8A%E5%AE%9E%E8%B7%B5/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在当今的数字化时代，企业级数据架构对于各行各业来说都是至关重要的。它不仅涉及数据的有效管理和利用，还直接影响到业务决策、操作效率和合规性。本文旨在探讨数据标准化、数据分布、数据生命周期管理、数据模型构建、数据安全和数据治理等关键方面，强调它们对于实现数据资产最大化的重要性，并提供具体的应用示例。<span id="more"></span></p>
@@ -3265,6 +3202,69 @@
         <tag>Builder Pattern</tag>
         <tag>Prototype Pattern</tag>
         <tag>Singleton Pattern</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浅谈数据仓库的分层设计</title>
+    <url>/2023/11/20/%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E5%88%86%E5%B1%82%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在构建现代数据仓库(Data Warehouse)时，分层设计方法不仅提高了数据处理的效率和质量，还增加了系统的灵活性和可扩展性，对于各种类型的业务环境都至关重要。<span id="more"></span></p>
+<h2 id="分层的意义"><a href="#分层的意义" class="headerlink" title="分层的意义"></a>分层的意义</h2><ol>
+<li><strong>效率提升</strong>：通过将数据处理分散到不同层次，提升整体系统的处理效率。每个层级专注于其特定的任务，优化数据流和处理时间。</li>
+<li><strong>数据质量和一致性</strong>：每个层级对数据进行清洗和标准化，提升数据质量，确保在整个组织中的一致性。</li>
+<li><strong>灵活性和可扩展性</strong>：分层设计提供灵活性，允许数据架构根据业务需求和技术发展进行调整和扩展。</li>
+<li><strong>针对性数据服务</strong>：每个层次针对不同用户和业务需求提供服务，确保数据在正确的时间被正确地使用。</li>
+</ol>
+<h2 id="分层示例"><a href="#分层示例" class="headerlink" title="分层示例"></a>分层示例</h2><p>以处理金融市场数据为例，简要说明数据仓库设计中的各个层级：</p>
+<ol>
+<li><p><strong>操作数据存储，也叫贴源层（Operational Data Store，ODS）</strong></p>
+<ul>
+<li><strong>数据源</strong>：实时交易数据、客户交易记录、市场行情更新等，涵盖股票、债券、外汇等多种金融产品。</li>
+<li><strong>处理</strong>：通过ETL处理，直接加载原始数据，并且保持数据原貌。</li>
+<li><strong>目的</strong>：接入来自各个渠道的数据，为更深入的分析提供实时或近实时的数据基础。</li>
+</ul>
+</li>
+<li><p><strong>数据明细层（Data Warehouse Detail，DWD）</strong></p>
+<ul>
+<li><strong>数据源</strong>：ODS层的原始数据。</li>
+<li><strong>处理</strong>：进行数据清洗和转换，确保交易数据的完整性和准确性，形成交易明细表。</li>
+<li><strong>目的</strong>：创建清洁、标准化的数据集，为数据仓库的高级分析和决策支持做好准备。</li>
+</ul>
+</li>
+<li><p><strong>数据基础层（Data Warehouse Base，DWB）或中间层（Data Warehouse Middle，DWM）</strong></p>
+<ul>
+<li><strong>数据源</strong>：DWD层的处理过的数据。</li>
+<li><strong>处理</strong>：对明细数据按照常用维度做初步的汇总，计算出常用的统计指标，存储客观数据：比如：交易产品类型按天汇总笔数，金额等，形成交易基础表。</li>
+<li><strong>目的</strong>：作为数据仓库的核心，确保数据的快速访问和高效管理，支持复杂的查询和数据挖掘。</li>
+</ul>
+</li>
+<li><p><strong>数据服务层（Data Warehouse Service，DWS）</strong></p>
+<ul>
+<li><strong>数据源</strong>：DWB/DWM层的数据。</li>
+<li><strong>处理</strong>：数据聚合和汇总，如按照时间段、产品类型或客户分群进行市场趋势分析和风险评估，形成交易主题宽表。</li>
+<li><strong>目的</strong>：提供汇总数据和高级分析，帮助管理层理解市场动态和客户行为。</li>
+</ul>
+</li>
+<li><p><strong>应用数据层（Application Data Service，ADS）</strong></p>
+<ul>
+<li><strong>数据源</strong>：DWS层的汇总数据。</li>
+<li><strong>处理</strong>：定制化数据处理，满足特定业务需求，如生成针对客户投资组合的分析报告，市场风险分析，合规性监控报告等。</li>
+<li><strong>目的</strong>：为最终用户提供直接、易于理解的数据视图和报告，支持具体的业务决策和操作。</li>
+</ul>
+</li>
+</ol>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>在任何业务环境中，尤其是数据密集型的行业，分层的数据仓库设计至关重要。它不仅提高了数据处理的效率，还确保了数据质量和一致性，为各种业务需求提供支持。这种方法的灵活性和扩展性使其成为适应快速变化的市场环境和业务需求的理想选择。</p>
+]]></content>
+      <categories>
+        <category>Data Warehouse</category>
+      </categories>
+      <tags>
+        <tag>Data Warehouse</tag>
+        <tag>ODS</tag>
+        <tag>DWD</tag>
+        <tag>DWM</tag>
+        <tag>DWB</tag>
+        <tag>DWS</tag>
+        <tag>ADS</tag>
       </tags>
   </entry>
   <entry>
