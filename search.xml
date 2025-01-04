@@ -444,6 +444,10 @@
 </tr>
 </thead>
 <tbody><tr>
+<td><strong>Java 23</strong></td>
+<td>1. Primitive Types in Patterns, instanceof, and switch (Preview) (模式、<code>instanceof</code> 和 <code>switch</code>中的基本类型（预览）)<br>2. Class-File API (Second Preview) (类文件 API（第二次预览）)<br>3. Markdown Documentation Comments (Markdown 文档注释)<br>4. Vector API (Eighth Incubator) (向量 API（第八次孵化器版）)<br>5. Stream Gatherers (Second Preview) (流收集器（第二次预览）)<br>6. Deprecate the Memory-Access Methods in sun.misc.Unsafe for Removal (将 <code>sun.misc.Unsafe</code> 中的内存访问方法标记为废弃以供移除)<br>7. ZGC: Generational Mode by Default (ZGC：默认启用代际模式)<br>8. Module Import Declarations (Preview) (模块导入声明（预览）)<br>9. Implicitly Declared Classes and Instance Main Methods (隐式声明的类和实例主方法)<br>10. Structured Concurrency (Third Preview) (结构化并发（第三次预览）)<br>11. Scoped Values (Third Preview) (范围值（第三次预览）)<br>12. Flexible Constructor Bodies (Second Preview) (灵活的构造函数体（第二次预览）)</td>
+</tr>
+<tr>
 <td><strong>Java 22</strong></td>
 <td>1. Region Pinning for G1（G1垃圾收集器的区域固定）<br>2. Statements before super(…) (Preview)（super(…)之前的语句（预览））<br>3. Foreign Function and Memory API（外部函数和内存API）<br>4. Unnamed Variables &amp; Patterns（未命名变量和模式）<br>5. Class-File API (Preview)（类文件API（预览））<br>6. String Templates (2nd Preview)（字符串模板（第二次预览））<br>7. Vector API (7th Incubator)（矢量API（第七次孵化））<br>8. Stream Gatherers (Preview)（流收集器（预览））<br>9. Structured Concurrency (2nd Preview)（结构化并发（第二次预览））<br>10. Implicitly Declared Classes and Instance Main Methods (2nd Preview)（隐式声明类和实例主方法（第二次预览））<br>11. Scoped Values（作用域值）</td>
 </tr>
@@ -518,15 +522,6 @@
       </tags>
   </entry>
   <entry>
-    <title>My first blog</title>
-    <url>/2017/03/19/My-first-blog/</url>
-    <content><![CDATA[<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">println <span class="string">&quot;Hello, world!&quot;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-  </entry>
-  <entry>
     <title>MyBatis之查询返回记录字段不全问题的解决方法</title>
     <url>/2017/04/28/MyBatis%E4%B9%8B%E6%9F%A5%E8%AF%A2%E8%BF%94%E5%9B%9E%E8%AE%B0%E5%BD%95%E5%AD%97%E6%AE%B5%E4%B8%8D%E5%85%A8%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h2 id="问题现象"><a href="#问题现象" class="headerlink" title="问题现象"></a>问题现象</h2><p>当select的返回记录类型设置为map(或者其他Map类型，比如java.util.HashMap等)时，返回的map对象可能并未包含所有字段，即只出现有值的字段，而这恰恰是MyBatis的默认处理方式。</p>
@@ -542,6 +537,15 @@
       <tags>
         <tag>MyBatis</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>My first blog</title>
+    <url>/2017/03/19/My-first-blog/</url>
+    <content><![CDATA[<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">println <span class="string">&quot;Hello, world!&quot;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
   </entry>
   <entry>
     <title>企业总体架构管控原则</title>
@@ -2961,6 +2965,69 @@
       </tags>
   </entry>
   <entry>
+    <title>浅谈数据仓库的分层设计</title>
+    <url>/2023/11/20/%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E5%88%86%E5%B1%82%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在构建现代数据仓库(Data Warehouse)时，分层设计方法不仅提高了数据处理的效率和质量，还增加了系统的灵活性和可扩展性，对于各种类型的业务环境都至关重要。<span id="more"></span></p>
+<h2 id="分层的意义"><a href="#分层的意义" class="headerlink" title="分层的意义"></a>分层的意义</h2><ol>
+<li><strong>效率提升</strong>：通过将数据处理分散到不同层次，提升整体系统的处理效率。每个层级专注于其特定的任务，优化数据流和处理时间。</li>
+<li><strong>数据质量和一致性</strong>：每个层级对数据进行清洗和标准化，提升数据质量，确保在整个组织中的一致性。</li>
+<li><strong>灵活性和可扩展性</strong>：分层设计提供灵活性，允许数据架构根据业务需求和技术发展进行调整和扩展。</li>
+<li><strong>针对性数据服务</strong>：每个层次针对不同用户和业务需求提供服务，确保数据在正确的时间被正确地使用。</li>
+</ol>
+<h2 id="分层示例"><a href="#分层示例" class="headerlink" title="分层示例"></a>分层示例</h2><p>以处理金融市场数据为例，简要说明数据仓库设计中的各个层级：</p>
+<ol>
+<li><p><strong>操作数据存储，也叫贴源层（Operational Data Store，ODS）</strong></p>
+<ul>
+<li><strong>数据源</strong>：实时交易数据、客户交易记录、市场行情更新等，涵盖股票、债券、外汇等多种金融产品。</li>
+<li><strong>处理</strong>：通过ETL处理，直接加载原始数据，并且保持数据原貌。</li>
+<li><strong>目的</strong>：接入来自各个渠道的数据，为更深入的分析提供实时或近实时的数据基础。</li>
+</ul>
+</li>
+<li><p><strong>数据明细层（Data Warehouse Detail，DWD）</strong></p>
+<ul>
+<li><strong>数据源</strong>：ODS层的原始数据。</li>
+<li><strong>处理</strong>：进行数据清洗和转换，确保交易数据的完整性和准确性，形成交易明细表。</li>
+<li><strong>目的</strong>：创建清洁、标准化的数据集，为数据仓库的高级分析和决策支持做好准备。</li>
+</ul>
+</li>
+<li><p><strong>数据基础层（Data Warehouse Base，DWB）或中间层（Data Warehouse Middle，DWM）</strong></p>
+<ul>
+<li><strong>数据源</strong>：DWD层的处理过的数据。</li>
+<li><strong>处理</strong>：对明细数据按照常用维度做初步的汇总，计算出常用的统计指标，存储客观数据：比如：交易产品类型按天汇总笔数，金额等，形成交易基础表。</li>
+<li><strong>目的</strong>：作为数据仓库的核心，确保数据的快速访问和高效管理，支持复杂的查询和数据挖掘。</li>
+</ul>
+</li>
+<li><p><strong>数据服务层（Data Warehouse Service，DWS）</strong></p>
+<ul>
+<li><strong>数据源</strong>：DWB/DWM层的数据。</li>
+<li><strong>处理</strong>：数据聚合和汇总，如按照时间段、产品类型或客户分群进行市场趋势分析和风险评估，形成交易主题宽表。</li>
+<li><strong>目的</strong>：提供汇总数据和高级分析，帮助管理层理解市场动态和客户行为。</li>
+</ul>
+</li>
+<li><p><strong>应用数据层（Application Data Service，ADS）</strong></p>
+<ul>
+<li><strong>数据源</strong>：DWS层的汇总数据。</li>
+<li><strong>处理</strong>：定制化数据处理，满足特定业务需求，如生成针对客户投资组合的分析报告，市场风险分析，合规性监控报告等。</li>
+<li><strong>目的</strong>：为最终用户提供直接、易于理解的数据视图和报告，支持具体的业务决策和操作。</li>
+</ul>
+</li>
+</ol>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>在任何业务环境中，尤其是数据密集型的行业，分层的数据仓库设计至关重要。它不仅提高了数据处理的效率，还确保了数据质量和一致性，为各种业务需求提供支持。这种方法的灵活性和扩展性使其成为适应快速变化的市场环境和业务需求的理想选择。</p>
+]]></content>
+      <categories>
+        <category>Data Warehouse</category>
+      </categories>
+      <tags>
+        <tag>Data Warehouse</tag>
+        <tag>ODS</tag>
+        <tag>DWD</tag>
+        <tag>DWM</tag>
+        <tag>DWB</tag>
+        <tag>DWS</tag>
+        <tag>ADS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>浅谈TCP三次握手和四次挥手</title>
     <url>/2024/05/18/%E6%B5%85%E8%B0%88TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在计算机网络中，TCP是实现可靠数据传输的重要协议。TCP通过三次握手（Three-Way Handshake）来建立连接，通过四次挥手（Four-Way Termination）来终止连接，确保数据传输的可靠性和连接管理的完整性。三次握手确保双方在通信前建立同步连接，防止重复数据包的干扰，确保序列号的同步。四次挥手则确保双方在连接终止时都能完全释放资源，防止数据丢失，并确保网络中不存在旧的数据包，从而避免新的连接受到干扰。理解这些过程对于排查网络问题和设计可靠的网络应用至关重要。<span id="more"></span></p>
@@ -3075,69 +3142,6 @@
         <tag>Network</tag>
         <tag>三次握手</tag>
         <tag>四次挥手</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>浅谈数据仓库的分层设计</title>
-    <url>/2023/11/20/%E6%B5%85%E8%B0%88%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%E7%9A%84%E5%88%86%E5%B1%82%E8%AE%BE%E8%AE%A1/</url>
-    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在构建现代数据仓库(Data Warehouse)时，分层设计方法不仅提高了数据处理的效率和质量，还增加了系统的灵活性和可扩展性，对于各种类型的业务环境都至关重要。<span id="more"></span></p>
-<h2 id="分层的意义"><a href="#分层的意义" class="headerlink" title="分层的意义"></a>分层的意义</h2><ol>
-<li><strong>效率提升</strong>：通过将数据处理分散到不同层次，提升整体系统的处理效率。每个层级专注于其特定的任务，优化数据流和处理时间。</li>
-<li><strong>数据质量和一致性</strong>：每个层级对数据进行清洗和标准化，提升数据质量，确保在整个组织中的一致性。</li>
-<li><strong>灵活性和可扩展性</strong>：分层设计提供灵活性，允许数据架构根据业务需求和技术发展进行调整和扩展。</li>
-<li><strong>针对性数据服务</strong>：每个层次针对不同用户和业务需求提供服务，确保数据在正确的时间被正确地使用。</li>
-</ol>
-<h2 id="分层示例"><a href="#分层示例" class="headerlink" title="分层示例"></a>分层示例</h2><p>以处理金融市场数据为例，简要说明数据仓库设计中的各个层级：</p>
-<ol>
-<li><p><strong>操作数据存储，也叫贴源层（Operational Data Store，ODS）</strong></p>
-<ul>
-<li><strong>数据源</strong>：实时交易数据、客户交易记录、市场行情更新等，涵盖股票、债券、外汇等多种金融产品。</li>
-<li><strong>处理</strong>：通过ETL处理，直接加载原始数据，并且保持数据原貌。</li>
-<li><strong>目的</strong>：接入来自各个渠道的数据，为更深入的分析提供实时或近实时的数据基础。</li>
-</ul>
-</li>
-<li><p><strong>数据明细层（Data Warehouse Detail，DWD）</strong></p>
-<ul>
-<li><strong>数据源</strong>：ODS层的原始数据。</li>
-<li><strong>处理</strong>：进行数据清洗和转换，确保交易数据的完整性和准确性，形成交易明细表。</li>
-<li><strong>目的</strong>：创建清洁、标准化的数据集，为数据仓库的高级分析和决策支持做好准备。</li>
-</ul>
-</li>
-<li><p><strong>数据基础层（Data Warehouse Base，DWB）或中间层（Data Warehouse Middle，DWM）</strong></p>
-<ul>
-<li><strong>数据源</strong>：DWD层的处理过的数据。</li>
-<li><strong>处理</strong>：对明细数据按照常用维度做初步的汇总，计算出常用的统计指标，存储客观数据：比如：交易产品类型按天汇总笔数，金额等，形成交易基础表。</li>
-<li><strong>目的</strong>：作为数据仓库的核心，确保数据的快速访问和高效管理，支持复杂的查询和数据挖掘。</li>
-</ul>
-</li>
-<li><p><strong>数据服务层（Data Warehouse Service，DWS）</strong></p>
-<ul>
-<li><strong>数据源</strong>：DWB/DWM层的数据。</li>
-<li><strong>处理</strong>：数据聚合和汇总，如按照时间段、产品类型或客户分群进行市场趋势分析和风险评估，形成交易主题宽表。</li>
-<li><strong>目的</strong>：提供汇总数据和高级分析，帮助管理层理解市场动态和客户行为。</li>
-</ul>
-</li>
-<li><p><strong>应用数据层（Application Data Service，ADS）</strong></p>
-<ul>
-<li><strong>数据源</strong>：DWS层的汇总数据。</li>
-<li><strong>处理</strong>：定制化数据处理，满足特定业务需求，如生成针对客户投资组合的分析报告，市场风险分析，合规性监控报告等。</li>
-<li><strong>目的</strong>：为最终用户提供直接、易于理解的数据视图和报告，支持具体的业务决策和操作。</li>
-</ul>
-</li>
-</ol>
-<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>在任何业务环境中，尤其是数据密集型的行业，分层的数据仓库设计至关重要。它不仅提高了数据处理的效率，还确保了数据质量和一致性，为各种业务需求提供支持。这种方法的灵活性和扩展性使其成为适应快速变化的市场环境和业务需求的理想选择。</p>
-]]></content>
-      <categories>
-        <category>Data Warehouse</category>
-      </categories>
-      <tags>
-        <tag>Data Warehouse</tag>
-        <tag>ODS</tag>
-        <tag>DWD</tag>
-        <tag>DWM</tag>
-        <tag>DWB</tag>
-        <tag>DWS</tag>
-        <tag>ADS</tag>
       </tags>
   </entry>
   <entry>
