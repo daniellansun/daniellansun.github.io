@@ -433,6 +433,15 @@
       </tags>
   </entry>
   <entry>
+    <title>My first blog</title>
+    <url>/2017/03/19/My-first-blog/</url>
+    <content><![CDATA[<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">println <span class="string">&quot;Hello, world!&quot;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Java各大版本新特性及改进概览</title>
     <url>/2024/07/15/Java%E5%90%84%E5%A4%A7%E7%89%88%E6%9C%AC%E6%96%B0%E7%89%B9%E6%80%A7%E5%8F%8A%E6%94%B9%E8%BF%9B%E6%A6%82%E8%A7%88/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在过去的几年中，Java通过不断的版本更新，持续引入了许多新的特性和改进，令Java语言屹立在编程语言之林。本文将介绍从Java 7到Java 22的主要新特性及改进，回顾Java语言演进的心路历程。<span id="more"></span></p>
@@ -520,15 +529,6 @@
       <tags>
         <tag>Java新特性及改进</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>My first blog</title>
-    <url>/2017/03/19/My-first-blog/</url>
-    <content><![CDATA[<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">println <span class="string">&quot;Hello, world!&quot;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
   </entry>
   <entry>
     <title>MyBatis之查询返回记录字段不全问题的解决方法</title>
@@ -993,7 +993,7 @@
   <entry>
     <title>如何设计出目标系统架构</title>
     <url>/2025/02/22/%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E5%87%BA%E7%9B%AE%E6%A0%87%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/</url>
-    <content><![CDATA[<h2 id="引言：架构师的思维模式——从“最好”到“最合适”"><a href="#引言：架构师的思维模式——从“最好”到“最合适”" class="headerlink" title="引言：架构师的思维模式——从“最好”到“最合适”"></a><strong>引言：架构师的思维模式——从“最好”到“最合适”</strong></h2><p>在系统架构设计的世界里，一个普遍存在却极具误导性的观念是追寻所谓的“最好”架构。然而，经验丰富的架构师都深知一个基本事实：对于任何系统而言，没有最好的架构，只有更合适的架构。系统架构设计并非一项寻找唯一正确答案的纯粹技术活动，它更像一门艺术与科学的结合体，要求我们在性能、成本、可维护性、安全性、上市时间等一系列相互冲突的约束和目标之间，做出审慎的权衡与取舍。</p>
+    <content><![CDATA[<h2 id="引言：架构师的思维模式——从“最好”到“最合适”"><a href="#引言：架构师的思维模式——从“最好”到“最合适”" class="headerlink" title="引言：架构师的思维模式——从“最好”到“最合适”"></a><strong>引言：架构师的思维模式——从“最好”到“最合适”</strong></h2><p>在系统架构设计的世界里，一个普遍存在却极具误导性的观念是追寻所谓的“最好”架构。然而，经验丰富的架构师都深知一个基本事实：对于任何系统而言，没有最好的架构，只有更合适的架构。系统架构设计并非一项寻找唯一正确答案的纯粹技术活动，它更像一门艺术与科学的结合体，要求我们在性能、成本、可维护性、安全性、上线时间等一系列相互冲突的约束和目标之间，做出审慎的权衡与取舍。</p>
 <span id="more"></span>
 
 <p>一个看似完美的技术方案，如果脱离了业务的实际需求、团队的技术储备和组织的演进阶段，很可能会成为项目失败的根源。反之，一个在技术上看似朴素的架构，若能精准地支撑业务快速迭代、有效管理系统复杂性，并为未来的演进留出空间，那它就是当下“最合适”的架构。</p>
@@ -1201,64 +1201,6 @@
         <tag>Concurrent Programming</tag>
         <tag>Coroutine</tag>
         <tag>Loom</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>揭秘JIT编译器</title>
-    <url>/2025/05/04/%E6%8F%AD%E7%A7%98JIT%E7%BC%96%E8%AF%91%E5%99%A8/</url>
-    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Java虚拟机（JVM）是Java生态系统的核心，它不仅提供了跨平台的兼容性，更是Java高性能运行的关键。JVM最初通过解释器执行字节码，这种方式启动快，但对于计算密集型或频繁执行的代码来说，性能并不理想。为了解决这个问题，JVM引入了即时编译（Just-In-Time, JIT）技术。</p>
-<span id="more"></span>
-
-<h2 id="什么是JIT编译？"><a href="#什么是JIT编译？" class="headerlink" title="什么是JIT编译？"></a>什么是JIT编译？</h2><p>简单来说，JIT编译器就像JVM内部的一个性能优化大师。它在Java程序运行时进行监控，识别出那些被频繁执行的“热点”代码（Hot Spots）。一旦识别出这些热点方法或循环，JIT编译器就会介入，将这些Java字节码编译成针对特定底层硬件和操作系统的高度优化的原生机器码。这些编译后的代码会被存储在一个称为“代码缓存（Code Cache）”的特殊内存区域中，以便后续调用时直接执行，从而大幅提升执行速度。</p>
-<h2 id="为何选择JIT？解释执行-vs-JIT编译-vs-AOT编译"><a href="#为何选择JIT？解释执行-vs-JIT编译-vs-AOT编译" class="headerlink" title="为何选择JIT？解释执行 vs. JIT编译 vs. AOT编译"></a>为何选择JIT？解释执行 vs. JIT编译 vs. AOT编译</h2><ul>
-<li><strong>解释执行：</strong> JVM逐行解释字节码并执行。优点是启动速度快，无需等待编译。缺点是对于重复执行的代码，每次都需要解释，效率较低。</li>
-<li><strong>JIT编译：</strong> 在运行时识别热点代码并编译为原生代码。优点是能根据实际运行情况进行优化，性能远超解释执行。缺点是编译过程本身需要消耗时间和CPU资源，且需要代码缓存空间。</li>
-<li><strong>AOT编译（Ahead-of-Time）：</strong> 在程序运行前就将字节码编译成本地代码。优点是启动时即可获得最佳性能，无需运行时编译开销。缺点是无法利用运行时的动态信息进行优化，且失去了Java的部分跨平台性。</li>
-</ul>
-<p>HotSpot JVM巧妙地结合了解释执行和JIT编译（特别是分层编译），以平衡启动速度和峰值性能。</p>
-<h2 id="HotSpot-JIT内部探秘"><a href="#HotSpot-JIT内部探秘" class="headerlink" title="HotSpot JIT内部探秘"></a>HotSpot JIT内部探秘</h2><p>HotSpot JVM拥有复杂的JIT架构，其中最核心的是：</p>
-<ol>
-<li> <strong>分层编译（Tiered Compilation）：</strong> HotSpot通常采用分层编译策略。代码首先由解释器执行，然后可能由C1（Client）编译器进行快速编译（优化较少），如果代码变得“更热”，则会由C2（Server）编译器进行更深层次、更耗时的优化编译，以达到更高的性能。</li>
-<li> <strong>代码缓存（Code Cache）：</strong> 这是存储JIT编译后的原生代码的内存区域。它的空间是有限的，如果代码缓存满了或者变得碎片化，可能会导致编译暂停或性能下降。从JDK 9开始，代码缓存被分段管理（例如，区分剖析代码、非剖析代码等），以改善管理效率。</li>
-<li> <strong>去优化（Deoptimization）：</strong> JIT的某些优化是基于假设（推测性优化）的，例如类型检查。如果运行时发现假设不成立（例如，加载了一个新的类导致类型继承关系改变），JVM需要能够安全地回退到解释执行或重新编译。这就是去优化的过程。频繁的去优化可能预示着代码中存在某些问题，影响性能。</li>
-</ol>
-<h2 id="JIT关键优化技术"><a href="#JIT关键优化技术" class="headerlink" title="JIT关键优化技术"></a>JIT关键优化技术</h2><p>JIT编译器运用了多种先进的优化技术来提升代码性能，以下是几个重要的例子：</p>
-<ul>
-<li><strong>内联（Inlining）：</strong> 这是最重要的优化之一，被称为“优化之门”。JIT将目标方法的字节码复制到调用处，消除了方法调用的开销。更重要的是，内联后的更大代码块为其他优化（如逃逸分析、常量折叠等）创造了条件。但是，方法的大小（字节码长度）和调用点的多态性（单态、双态可内联，多态通常不行）会限制内联的发生。</li>
-<li><strong>逃逸分析（Escape Analysis）：</strong> JIT分析对象的作用域。如果一个对象的作用域仅限于当前方法（即“不逃逸”），JIT就可以进行优化：<ul>
-<li><strong>标量替换（Scalar Replacement）：</strong> 将对象分解为其成员变量，存储在CPU寄存器或栈上，而不是在堆上分配整个对象，从而避免了堆内存分配和垃圾回收的开销。</li>
-<li><strong>锁消除（Lock Elision）：</strong> 如果一个锁对象不逃逸，JIT可以消除对该对象的加锁操作。</li>
-</ul>
-</li>
-<li><strong>分支预测（Branch Prediction）：</strong> 优化<code>if-else</code>等条件分支，尝试预测哪个分支更可能被执行，并据此优化指令流水线。不稳定的分支（预测成功率低）会影响性能。</li>
-<li><strong>循环展开（Loop Unrolling）：</strong> 减少循环控制的开销，并将更多的循环体指令暴露给其他优化。</li>
-<li><strong>向量化（Vectorization）：</strong> 利用CPU的SIMD（Single Instruction, Multiple Data）指令，一次性对多个数据元素执行相同的操作，常见于数组处理等场景。</li>
-<li><strong>内建函数（Intrinsics）：</strong> 对于JDK核心库中的某些常用方法（如<code>System.arraycopy</code>、<code>String.equals</code>、<code>Math.log10</code>等），JVM提供了高度优化的、特定于CPU架构的原生代码实现，直接替换对这些方法的调用。</li>
-</ul>
-<h2 id="观察JIT"><a href="#观察JIT" class="headerlink" title="观察JIT"></a>观察JIT</h2><p>想知道JIT在你的应用中做了什么吗？你可以通过JVM参数来启用JIT日志记录：</p>
-<ul>
-<li><code>-XX:+UnlockDiagnosticVMOptions -XX:+LogCompilation</code>：记录JIT编译活动到一个<code>hotspot.log</code>文件。</li>
-<li><code>-XX:+PrintAssembly</code>（需要额外配置hsdis）：打印出JIT生成的汇编代码。</li>
-</ul>
-<p>对于复杂的日志分析，可以使用像JITWatch这样的工具，它可以可视化编译、内联、去优化、逃逸分析等信息，帮助你深入理解JIT的行为。</p>
-<h2 id="实用建议"><a href="#实用建议" class="headerlink" title="实用建议"></a>实用建议</h2><p>虽然我们不应过早优化（”过早的优化是万恶之源” - Donald Knuth），但在关键的性能瓶颈处（那关键的3%），理解JIT并编写对其友好的代码至关重要：</p>
-<ul>
-<li><strong>保持方法小巧：</strong> 有利于JIT进行内联。检查热点代码路径上的方法大小，特别是第三方库的方法。</li>
-<li><strong>注意多态性：</strong> 接口过多的实现类可能导致调用点变为多态（Megamorphic），阻碍内联。</li>
-<li><strong>关注热点代码中的分配：</strong> 利用逃逸分析避免不必要的堆分配。检查JIT日志确认对象是否成功标量替换。</li>
-<li><strong>减少不可预测的分支：</strong> 优化代码逻辑，使分支更容易被预测。</li>
-</ul>
-<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>JIT编译器是Java高性能运行的幕后英雄。通过在运行时将热点字节码编译为优化的原生代码，它极大地提升了Java应用程序的执行效率。理解JIT的工作原理和优化技术，结合适当的工具进行观察和分析，可以帮助我们编写出性能更佳的Java代码。</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-        <category>JVM</category>
-        <category>JIT</category>
-      </categories>
-      <tags>
-        <tag>JVM</tag>
-        <tag>Java</tag>
-        <tag>JIT</tag>
       </tags>
   </entry>
   <entry>
@@ -3900,6 +3842,64 @@
       </categories>
       <tags>
         <tag>Architecture</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>揭秘JIT编译器</title>
+    <url>/2025/05/04/%E6%8F%AD%E7%A7%98JIT%E7%BC%96%E8%AF%91%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Java虚拟机（JVM）是Java生态系统的核心，它不仅提供了跨平台的兼容性，更是Java高性能运行的关键。JVM最初通过解释器执行字节码，这种方式启动快，但对于计算密集型或频繁执行的代码来说，性能并不理想。为了解决这个问题，JVM引入了即时编译（Just-In-Time, JIT）技术。</p>
+<span id="more"></span>
+
+<h2 id="什么是JIT编译？"><a href="#什么是JIT编译？" class="headerlink" title="什么是JIT编译？"></a>什么是JIT编译？</h2><p>简单来说，JIT编译器就像JVM内部的一个性能优化大师。它在Java程序运行时进行监控，识别出那些被频繁执行的“热点”代码（Hot Spots）。一旦识别出这些热点方法或循环，JIT编译器就会介入，将这些Java字节码编译成针对特定底层硬件和操作系统的高度优化的原生机器码。这些编译后的代码会被存储在一个称为“代码缓存（Code Cache）”的特殊内存区域中，以便后续调用时直接执行，从而大幅提升执行速度。</p>
+<h2 id="为何选择JIT？解释执行-vs-JIT编译-vs-AOT编译"><a href="#为何选择JIT？解释执行-vs-JIT编译-vs-AOT编译" class="headerlink" title="为何选择JIT？解释执行 vs. JIT编译 vs. AOT编译"></a>为何选择JIT？解释执行 vs. JIT编译 vs. AOT编译</h2><ul>
+<li><strong>解释执行：</strong> JVM逐行解释字节码并执行。优点是启动速度快，无需等待编译。缺点是对于重复执行的代码，每次都需要解释，效率较低。</li>
+<li><strong>JIT编译：</strong> 在运行时识别热点代码并编译为原生代码。优点是能根据实际运行情况进行优化，性能远超解释执行。缺点是编译过程本身需要消耗时间和CPU资源，且需要代码缓存空间。</li>
+<li><strong>AOT编译（Ahead-of-Time）：</strong> 在程序运行前就将字节码编译成本地代码。优点是启动时即可获得最佳性能，无需运行时编译开销。缺点是无法利用运行时的动态信息进行优化，且失去了Java的部分跨平台性。</li>
+</ul>
+<p>HotSpot JVM巧妙地结合了解释执行和JIT编译（特别是分层编译），以平衡启动速度和峰值性能。</p>
+<h2 id="HotSpot-JIT内部探秘"><a href="#HotSpot-JIT内部探秘" class="headerlink" title="HotSpot JIT内部探秘"></a>HotSpot JIT内部探秘</h2><p>HotSpot JVM拥有复杂的JIT架构，其中最核心的是：</p>
+<ol>
+<li> <strong>分层编译（Tiered Compilation）：</strong> HotSpot通常采用分层编译策略。代码首先由解释器执行，然后可能由C1（Client）编译器进行快速编译（优化较少），如果代码变得“更热”，则会由C2（Server）编译器进行更深层次、更耗时的优化编译，以达到更高的性能。</li>
+<li> <strong>代码缓存（Code Cache）：</strong> 这是存储JIT编译后的原生代码的内存区域。它的空间是有限的，如果代码缓存满了或者变得碎片化，可能会导致编译暂停或性能下降。从JDK 9开始，代码缓存被分段管理（例如，区分剖析代码、非剖析代码等），以改善管理效率。</li>
+<li> <strong>去优化（Deoptimization）：</strong> JIT的某些优化是基于假设（推测性优化）的，例如类型检查。如果运行时发现假设不成立（例如，加载了一个新的类导致类型继承关系改变），JVM需要能够安全地回退到解释执行或重新编译。这就是去优化的过程。频繁的去优化可能预示着代码中存在某些问题，影响性能。</li>
+</ol>
+<h2 id="JIT关键优化技术"><a href="#JIT关键优化技术" class="headerlink" title="JIT关键优化技术"></a>JIT关键优化技术</h2><p>JIT编译器运用了多种先进的优化技术来提升代码性能，以下是几个重要的例子：</p>
+<ul>
+<li><strong>内联（Inlining）：</strong> 这是最重要的优化之一，被称为“优化之门”。JIT将目标方法的字节码复制到调用处，消除了方法调用的开销。更重要的是，内联后的更大代码块为其他优化（如逃逸分析、常量折叠等）创造了条件。但是，方法的大小（字节码长度）和调用点的多态性（单态、双态可内联，多态通常不行）会限制内联的发生。</li>
+<li><strong>逃逸分析（Escape Analysis）：</strong> JIT分析对象的作用域。如果一个对象的作用域仅限于当前方法（即“不逃逸”），JIT就可以进行优化：<ul>
+<li><strong>标量替换（Scalar Replacement）：</strong> 将对象分解为其成员变量，存储在CPU寄存器或栈上，而不是在堆上分配整个对象，从而避免了堆内存分配和垃圾回收的开销。</li>
+<li><strong>锁消除（Lock Elision）：</strong> 如果一个锁对象不逃逸，JIT可以消除对该对象的加锁操作。</li>
+</ul>
+</li>
+<li><strong>分支预测（Branch Prediction）：</strong> 优化<code>if-else</code>等条件分支，尝试预测哪个分支更可能被执行，并据此优化指令流水线。不稳定的分支（预测成功率低）会影响性能。</li>
+<li><strong>循环展开（Loop Unrolling）：</strong> 减少循环控制的开销，并将更多的循环体指令暴露给其他优化。</li>
+<li><strong>向量化（Vectorization）：</strong> 利用CPU的SIMD（Single Instruction, Multiple Data）指令，一次性对多个数据元素执行相同的操作，常见于数组处理等场景。</li>
+<li><strong>内建函数（Intrinsics）：</strong> 对于JDK核心库中的某些常用方法（如<code>System.arraycopy</code>、<code>String.equals</code>、<code>Math.log10</code>等），JVM提供了高度优化的、特定于CPU架构的原生代码实现，直接替换对这些方法的调用。</li>
+</ul>
+<h2 id="观察JIT"><a href="#观察JIT" class="headerlink" title="观察JIT"></a>观察JIT</h2><p>想知道JIT在你的应用中做了什么吗？你可以通过JVM参数来启用JIT日志记录：</p>
+<ul>
+<li><code>-XX:+UnlockDiagnosticVMOptions -XX:+LogCompilation</code>：记录JIT编译活动到一个<code>hotspot.log</code>文件。</li>
+<li><code>-XX:+PrintAssembly</code>（需要额外配置hsdis）：打印出JIT生成的汇编代码。</li>
+</ul>
+<p>对于复杂的日志分析，可以使用像JITWatch这样的工具，它可以可视化编译、内联、去优化、逃逸分析等信息，帮助你深入理解JIT的行为。</p>
+<h2 id="实用建议"><a href="#实用建议" class="headerlink" title="实用建议"></a>实用建议</h2><p>虽然我们不应过早优化（”过早的优化是万恶之源” - Donald Knuth），但在关键的性能瓶颈处（那关键的3%），理解JIT并编写对其友好的代码至关重要：</p>
+<ul>
+<li><strong>保持方法小巧：</strong> 有利于JIT进行内联。检查热点代码路径上的方法大小，特别是第三方库的方法。</li>
+<li><strong>注意多态性：</strong> 接口过多的实现类可能导致调用点变为多态（Megamorphic），阻碍内联。</li>
+<li><strong>关注热点代码中的分配：</strong> 利用逃逸分析避免不必要的堆分配。检查JIT日志确认对象是否成功标量替换。</li>
+<li><strong>减少不可预测的分支：</strong> 优化代码逻辑，使分支更容易被预测。</li>
+</ul>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>JIT编译器是Java高性能运行的幕后英雄。通过在运行时将热点字节码编译为优化的原生代码，它极大地提升了Java应用程序的执行效率。理解JIT的工作原理和优化技术，结合适当的工具进行观察和分析，可以帮助我们编写出性能更佳的Java代码。</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+        <category>JVM</category>
+        <category>JIT</category>
+      </categories>
+      <tags>
+        <tag>JVM</tag>
+        <tag>Java</tag>
+        <tag>JIT</tag>
       </tags>
   </entry>
 </search>
