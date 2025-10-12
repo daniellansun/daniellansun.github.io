@@ -6,7 +6,7 @@
   <link href="https://blog.sunlan.me/atom.xml" rel="self"/>
   
   <link href="https://blog.sunlan.me/"/>
-  <updated>2025-07-21T13:31:29.878Z</updated>
+  <updated>2025-10-12T15:09:43.933Z</updated>
   <id>https://blog.sunlan.me/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>清除GitHub幽灵通知</title>
+    <link href="https://blog.sunlan.me/2025/10/13/%E6%B8%85%E9%99%A4GitHub%E5%B9%BD%E7%81%B5%E9%80%9A%E7%9F%A5/"/>
+    <id>https://blog.sunlan.me/2025/10/13/%E6%B8%85%E9%99%A4GitHub%E5%B9%BD%E7%81%B5%E9%80%9A%E7%9F%A5/</id>
+    <published>2025-10-12T15:52:12.000Z</published>
+    <updated>2025-10-12T15:09:43.933Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;近日来，GitHub上出现了一些幽灵通知（Ghost Notifications），这些幽灵通知通常来自已经被删除或转移的仓库，导致用户无法通过常规方式清除，进而带来了不少困扰。由于GitHub官方未能及时处理，忍耐一段时间后，终于忍无可忍。经查阅GitHub上的资料，并做了诸多尝试后，发现以下步骤对Chrome用户行之有效：</summary>
+    
+    
+    
+    <category term="其他" scheme="https://blog.sunlan.me/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+    <category term="GitHub" scheme="https://blog.sunlan.me/tags/GitHub/"/>
+    
+  </entry>
   
   <entry>
     <title>漫谈现代架构原则</title>
@@ -473,33 +492,6 @@
     <category term="Javadoc" scheme="https://blog.sunlan.me/tags/Javadoc/"/>
     
     <category term="Groovydoc" scheme="https://blog.sunlan.me/tags/Groovydoc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM Bytecode之invokedynamic漫谈</title>
-    <link href="https://blog.sunlan.me/2023/01/14/JVM-Bytecode%E4%B9%8Binvokedynamic%E6%BC%AB%E8%B0%88/"/>
-    <id>https://blog.sunlan.me/2023/01/14/JVM-Bytecode%E4%B9%8Binvokedynamic%E6%BC%AB%E8%B0%88/</id>
-    <published>2023-01-14T10:12:37.000Z</published>
-    <updated>2025-07-21T13:31:29.844Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;invokedynamic是直到Java 7才引入的bytecode指令，当初设计该指令时，是为了方便JVM动态语言的实现，比如Groovy、JRuby、Jython等，而其真正被Java界关注到则是从Java 8开始，因为Java 8引入了Lambda Expression以及Method Reference这两大特性，其实现便是基于invokedynamic指令完成的。</summary>
-    
-    
-    
-    <category term="Java" scheme="https://blog.sunlan.me/categories/Java/"/>
-    
-    <category term="JVM" scheme="https://blog.sunlan.me/categories/Java/JVM/"/>
-    
-    
-    <category term="JVM" scheme="https://blog.sunlan.me/tags/JVM/"/>
-    
-    <category term="Bytecode" scheme="https://blog.sunlan.me/tags/Bytecode/"/>
-    
-    <category term="invokedynamic" scheme="https://blog.sunlan.me/tags/invokedynamic/"/>
-    
-    <category term="Reflection" scheme="https://blog.sunlan.me/tags/Reflection/"/>
     
   </entry>
   
