@@ -6,7 +6,7 @@
   <link href="https://blog.sunlan.me/atom.xml" rel="self"/>
   
   <link href="https://blog.sunlan.me/"/>
-  <updated>2025-10-12T15:09:43.933Z</updated>
+  <updated>2026-09-25T08:08:14.545Z</updated>
   <id>https://blog.sunlan.me/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从脚本利器到现代工程语言：Apache Groovy 6.0深度解读</title>
+    <link href="https://blog.sunlan.me/2026/09/25/%E4%BB%8E%E8%84%9A%E6%9C%AC%E5%88%A9%E5%99%A8%E5%88%B0%E7%8E%B0%E4%BB%A3%E5%B7%A5%E7%A8%8B%E8%AF%AD%E8%A8%80%EF%BC%9AApache-Groovy-6-0%E6%B7%B1%E5%BA%A6%E8%A7%A3%E8%AF%BB/"/>
+    <id>https://blog.sunlan.me/2026/09/25/%E4%BB%8E%E8%84%9A%E6%9C%AC%E5%88%A9%E5%99%A8%E5%88%B0%E7%8E%B0%E4%BB%A3%E5%B7%A5%E7%A8%8B%E8%AF%AD%E8%A8%80%EF%BC%9AApache-Groovy-6-0%E6%B7%B1%E5%BA%A6%E8%A7%A3%E8%AF%BB/</id>
+    <published>2026-09-25T09:01:37.000Z</published>
+    <updated>2026-09-25T08:08:14.545Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Apache Groovy 6.0已经正式发布。这不是一次修修补补的小迭代，而是Groovy面向JDK 17+、虚拟线程（Virtual Threads）、云原生运行时与当代工程工具链的一次系统性升级。&lt;/p&gt;
+&lt;p&gt;作为运行在JVM上的动态/静态混合语言，Groovy长期承担三重职责：Java生态中高生产率的胶水与脚本语言，企业级领域特定语言（DSL）、构建与测试的重要实现手段，以及把复杂业务规则写成可读代码的建模工具。Groovy 6在这三方面同步推进：并发可以用接近同步代码的顺序风格表达；标准库更接近开箱即用（batteries-included）；方法声明开始具备可被编译器核实的规格（specification）意义；动态分发则在语义保持不变的前提下，获得更稳定的热点行为与更低的分配开销。&lt;/p&gt;
+&lt;p&gt;最低运行环境提升至JDK 17，并已在JDK 17至27上完成验证。运行基线与当代JVM对齐之后，语言、类库与运行时得以按虚拟线程、模块系统与原生镜像等能力重新设计。</summary>
+    
+    
+    
+    <category term="Groovy" scheme="https://blog.sunlan.me/categories/Groovy/"/>
+    
+    
+    <category term="Groovy 6" scheme="https://blog.sunlan.me/tags/Groovy-6/"/>
+    
+    <category term="async/await" scheme="https://blog.sunlan.me/tags/async-await/"/>
+    
+  </entry>
   
   <entry>
     <title>清除GitHub幽灵通知</title>
@@ -469,29 +492,6 @@
     <category term="Behavioral Pattern" scheme="https://blog.sunlan.me/tags/Behavioral-Pattern/"/>
     
     <category term="GoF" scheme="https://blog.sunlan.me/tags/GoF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GroovyHelp之怀旧归档篇</title>
-    <link href="https://blog.sunlan.me/2023/01/27/GroovyHelp%E4%B9%8B%E6%80%80%E6%97%A7%E5%BD%92%E6%A1%A3%E7%AF%87/"/>
-    <id>https://blog.sunlan.me/2023/01/27/GroovyHelp%E4%B9%8B%E6%80%80%E6%97%A7%E5%BD%92%E6%A1%A3%E7%AF%87/</id>
-    <published>2023-01-26T16:16:08.000Z</published>
-    <updated>2025-07-21T13:31:29.790Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;GroovyHelp简介&quot;&gt;&lt;a href=&quot;#GroovyHelp简介&quot; class=&quot;headerlink&quot; title=&quot;GroovyHelp简介&quot;&gt;&lt;/a&gt;GroovyHelp简介&lt;/h2&gt;&lt;p&gt;&amp;emsp;&amp;emsp;GroovyHelp是一款针对&lt;strong&gt;Javadoc&lt;/strong&gt;及&lt;strong&gt;Groovydoc&lt;/strong&gt;研发的多功能API文档管理软件，它能够帮助&lt;strong&gt;Java开发人员&lt;/strong&gt;、&lt;strong&gt;Groovy开发人员&lt;/strong&gt;以及&lt;strong&gt;Android开发人员&lt;/strong&gt;方便快速地&lt;strong&gt;搜索&lt;/strong&gt;、&lt;strong&gt;查阅&lt;/strong&gt;、&lt;strong&gt;比较&lt;/strong&gt;API文档并对其进行高效管理，从此无需苦苦寻觅chm格式的帮助文档了。可访问&lt;span class=&quot;exturl&quot; data-url=&quot;aHR0cHM6Ly9naXRodWIuY29tL2RhbmllbGxhbnN1bi9ncm9vdnloZWxw&quot;&gt;GroovyHelp项目首页&lt;i class=&quot;fa fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/span&gt;，获悉GroovyHelp最新信息。</summary>
-    
-    
-    
-    <category term="Tool" scheme="https://blog.sunlan.me/categories/Tool/"/>
-    
-    
-    <category term="GroovyHelp" scheme="https://blog.sunlan.me/tags/GroovyHelp/"/>
-    
-    <category term="Javadoc" scheme="https://blog.sunlan.me/tags/Javadoc/"/>
-    
-    <category term="Groovydoc" scheme="https://blog.sunlan.me/tags/Groovydoc/"/>
     
   </entry>
   
