@@ -6,7 +6,7 @@
   <link href="https://blog.sunlan.me/atom.xml" rel="self"/>
   
   <link href="https://blog.sunlan.me/"/>
-  <updated>2026-09-26T10:42:21.576Z</updated>
+  <updated>2026-09-26T10:45:00.641Z</updated>
   <id>https://blog.sunlan.me/</id>
   
   <author>
@@ -21,16 +21,12 @@
     <link href="https://blog.sunlan.me/2026/09/25/%E4%BB%8E%E8%84%9A%E6%9C%AC%E5%88%A9%E5%99%A8%E5%88%B0%E7%8E%B0%E4%BB%A3%E5%B7%A5%E7%A8%8B%E8%AF%AD%E8%A8%80%EF%BC%9AApache-Groovy-6-0%E6%B7%B1%E5%BA%A6%E8%A7%A3%E8%AF%BB/"/>
     <id>https://blog.sunlan.me/2026/09/25/%E4%BB%8E%E8%84%9A%E6%9C%AC%E5%88%A9%E5%99%A8%E5%88%B0%E7%8E%B0%E4%BB%A3%E5%B7%A5%E7%A8%8B%E8%AF%AD%E8%A8%80%EF%BC%9AApache-Groovy-6-0%E6%B7%B1%E5%BA%A6%E8%A7%A3%E8%AF%BB/</id>
     <published>2026-09-25T09:01:37.000Z</published>
-    <updated>2026-09-26T10:42:21.576Z</updated>
+    <updated>2026-09-26T10:45:00.641Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Apache Groovy 6.0已经正式发布。这不是一次修修补补的小迭代，而是Groovy面向JDK 17+、虚拟线程（Virtual</summary>
-        
-      
+    <summary type="html">&lt;p&gt;Apache Groovy 6.0已经正式发布。这不是一次修修补补的小迭代，而是Groovy面向JDK 17+、虚拟线程（Virtual Threads）、云原生运行时与当代工程工具链的一次系统性升级。&lt;/p&gt;
+&lt;p&gt;作为运行在JVM上的动态/静态混合语言，Groovy长期承担三重职责：Java生态中高生产率的胶水与脚本语言，企业级领域特定语言（DSL）、构建与测试的重要实现手段，以及把复杂业务规则写成可读代码的建模工具。Groovy 6在这三方面同步推进：并发可以用接近同步代码的顺序风格表达；标准库更接近开箱即用（batteries-included）；方法声明开始具备可被编译器核实的规格（specification）意义；动态分发则在语义保持不变的前提下，获得更稳定的热点行为与更低的分配开销。&lt;/p&gt;
+&lt;p&gt;最低运行环境提升至JDK 17，构建与运行均以JDK 17为下限，并已在JDK 17至27上完成验证。&lt;code&gt;CompilerConfiguration&lt;/code&gt;亦识别&lt;code&gt;JDK27&lt;/code&gt;目标字节码。运行基线与当代JVM对齐之后，语言、类库与运行时得以按虚拟线程、模块系统与原生镜像等能力重新设计。&lt;/p&gt;</summary>
     
     
     
